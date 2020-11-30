@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% Installation using Composer
+
+\begin{frame}[fragile]
+	\frametitle{Installation and Upgrade}
+	\framesubtitle{Installation Using \texttt{Composer}}
+
+	\begin{itemize}
+		\item Installation using \textit{composer} under Linux, Mac OS X and Windows 10:
+
+			\begin{lstlisting}
+$ cd /var/www/site/
+$ composer create-project typo3/cms-base-distribution typo3v11 ^11
+			\end{lstlisting}
+
+		\item Alternatively, create your custom \texttt{composer.json} file and run:
+
+			\begin{lstlisting}
+$ composer install
+			\end{lstlisting}
+
+			Further details and examples for \texttt{composer.json} files are available at:\newline
+			\smaller
+				\href{https://composer.typo3.org}{https://composer.typo3.org}
+			\normalsize
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

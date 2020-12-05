@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92334 | X-Redirect-By Header for pages with redirect types
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{X-Redirect-By Header}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\smaller\ttfamily}
+
+	\begin{itemize}
+		\item On redirects, TYPO3 now sends an additional HTTP header to indicate
+			which page type triggered the redirect
+		\item The following page types trigger a redirect:
+			\begin{itemize}\smaller
+				\item Shortcut
+				\item Mountpoint pages (where applicable)
+				\item Link to external URL
+			\end{itemize}\normalsize
+		\item The following global option adds further information to the output\newline
+			\smaller(only enable this option for debugging purposes!)\normalsize
+			\smaller\texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['FE']['exposeRedirectInformation']}\normalsize
+\begin{lstlisting}
+# exposeRedirectInformation is disabled:
+X-Redirect-By: TYPO3 External URL
+# exposeRedirectInformation is enabled
+X-Redirect-By: TYPO3 External URL at page with ID 456
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Breaking | 92457 | Extension Repository database table removed
 % Feature | 92538 | Show extension constraints in extension manager
+% Breaking | 92532 | Support for extension-in-extension installation in Extension Manager removed
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators}
@@ -22,8 +23,11 @@
 			\end{itemize}\normalsize
 			\vspace{0.4cm}
 
-		\item Item 2
-		\item Item 3
+		\item The (undocumented) support for extension-in-extension installations
+			has been removed. The following directory is now ignored:
+			\begin{itemize}\smaller
+				\item \texttt{EXT:my\_extension/Initialisation/Extensions/}
+			\end{itemize}
 	\end{itemize}
 
 \end{frame}

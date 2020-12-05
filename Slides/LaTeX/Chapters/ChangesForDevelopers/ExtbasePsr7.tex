@@ -1,0 +1,47 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92502 | Make Extbase handle PSR-7 responses only
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Extbase: PSR-7 Responses}
+
+	\begin{itemize}
+		\item Extbase now creates a
+			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7}-compatible
+			response object and passes it back through the request handling stack.
+		\item As a consequence, the following interfaces/classes have been removed:
+
+			\begin{itemize}\small
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Extbase\textbackslash
+					Mvc\textbackslash
+					ResponseInterface}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Extbase\textbackslash
+					Mvc\textbackslash
+					Response}
+			\end{itemize}
+
+		\item If a controller action should return custom data instead of the
+			default view, a PSR-7-compatible response object can returned:
+\begin{lstlisting}
+public function listAction()
+{
+  // do your action stuff
+  return new \TYPO3\CMS\Core\Http\HtmlResponse($this->view->render());
+}
+\end{lstlisting}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

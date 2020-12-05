@@ -1,0 +1,50 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 91859 | Allow SelectCheckBox groups to be initally expanded
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{SelectCheckBox Groups}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item The new TCA setting \texttt{expandAll} can be used to expand
+			grouped checkboxes by default.
+		\item As this is a display behavior, the setting needs to be placed
+		 	in \texttt{['config']['appearance']}.
+		\item For example:
+\begin{lstlisting}
+'select_checkbox' => [
+  'label' => 'Select your dinner',
+  'config' => [
+        'type' => 'select',
+        'renderType' => 'selectCheckBox',
+        'appearance' => [
+            'expandAll' => true
+        ],
+        'items' => [
+            ['group 1', '--div--'],
+            ['Pizza', 1],
+            ['Pasta', 2],
+            ['Steak', 3],
+            ['group 2', '--div--'],
+            ['Salad', 4],
+            ['Ice cream', 5]
+        ]
+    ]
+]
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

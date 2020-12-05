@@ -1,0 +1,42 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92457 | Improved Extension Repository API
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Extension Repository API}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\smaller\ttfamily}
+
+	\begin{itemize}
+		\item The Extension Manager now uses an \textbf{Extension Remotes API}.
+		\item Previously, alternatives to the TYPO3 Extension Repository (TER)
+			were stored in a database table.
+		\item It possible to define new remotes, disable registered remotes,
+			or change the default remote.
+		\item A custom remote configuration can be configured in file
+			\small\texttt{Configuration/Services.yaml} for example:
+\begin{lstlisting}
+extension.remote.myremote:
+  class: 'TYPO3\CMS\Extensionmanager\Remote\TerExtensionRemote'
+  arguments:
+    $identifier: 'myremote'
+    $options:
+       remoteBase: 'https://example.com/'
+  tags:
+    - name: 'extension.remote'
+      default: true
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

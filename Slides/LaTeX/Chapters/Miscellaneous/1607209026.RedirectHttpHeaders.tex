@@ -17,20 +17,20 @@
 
 	\begin{itemize}
 		\item On redirects, TYPO3 now sends an additional HTTP header to indicate
-			which page type triggered the redirect
-		\item The following page types trigger a redirect:
-			\begin{itemize}\smaller
+			which of the following page types triggered the redirect:
+			\begin{itemize}\small
 				\item Shortcut
 				\item Mountpoint pages (where applicable)
 				\item Link to external URL
 			\end{itemize}\normalsize
-		\item The following global option adds further information to the output\newline
+		\item If enabled, the page ID is added to the output:\newline
 			\smaller(only enable this option for debugging purposes!)\normalsize
-			\smaller\texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['FE']['exposeRedirectInformation']}\normalsize
 \begin{lstlisting}
+# See: $GLOBALS['TYPO3_CONF_VARS']['FE']['exposeRedirectInformation']
+
 # exposeRedirectInformation is disabled:
 X-Redirect-By: TYPO3 External URL
-# exposeRedirectInformation is enabled
+# exposeRedirectInformation is enabled:
 X-Redirect-By: TYPO3 External URL at page with ID 456
 \end{lstlisting}
 

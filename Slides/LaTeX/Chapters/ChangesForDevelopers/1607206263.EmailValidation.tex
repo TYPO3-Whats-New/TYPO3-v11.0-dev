@@ -12,9 +12,12 @@
 	\frametitle{Changes for Developers}
 	\framesubtitle{Email Validation}
 
+	% decrease font size for code listing
+	\lstset{basicstyle=\smaller\ttfamily}
+
 	\begin{itemize}
 		\item Developers can use the following method to validate email addresses:
-			\newline\small
+			\newline\smaller
 				\texttt{TYPO3\textbackslash
 					CMS\textbackslash
 					Core\textbackslash
@@ -24,7 +27,7 @@
 		\item Since TYPO3 v11.0, it is possible to configure the validators
 			and to implement custom solutions.
 
-		\item For example (in file \texttt{LocalConfiguration.php} or \texttt{AdditionalConfiguration.php}):
+		\item For example:
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['MAIL']['validators'] = [
   \Egulias\EmailValidator\Validation\RFCValidation::class,
@@ -33,7 +36,7 @@ $GLOBALS['TYPO3_CONF_VARS']['MAIL']['validators'] = [
 \end{lstlisting}
 
 		\item The following default validators are available:
-			\begin{itemize}
+			\begin{itemize}\smaller
 				\item \texttt{\textbackslash
 					Egulias\textbackslash
 					EmailValidator\textbackslash

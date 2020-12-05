@@ -12,17 +12,20 @@
 	\frametitle{Installation and Upgrade}
 	\framesubtitle{Installation Using \texttt{Composer}}
 
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
 	\begin{itemize}
 		\item Installation using \textit{composer} under Linux, macOS, and Windows 10:
-			\begin{lstlisting}
+\begin{lstlisting}
 $ cd /var/www/site/
 $ composer create-project typo3/cms-base-distribution typo3v11 ^11
-			\end{lstlisting}
+\end{lstlisting}
 
 		\item Alternatively, create your custom \texttt{composer.json} file and run:
-			\begin{lstlisting}
+\begin{lstlisting}
 $ composer install
-			\end{lstlisting}
+\end{lstlisting}
 
 			Further details are available in the
 			\href{https://docs.typo3.org/m/typo3/guide-installation/master/en-us/}{Installation and Upgrade Guide}.

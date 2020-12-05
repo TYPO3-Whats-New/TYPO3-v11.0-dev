@@ -9,14 +9,17 @@
 % Breaking | 92457 | Extension Repository database table removed
 % Feature | 92538 | Show extension constraints in extension manager
 % Breaking | 92532 | Support for extension-in-extension installation in Extension Manager removed
+% Breaking | 92590 | Removed support for extension upload of t3x files ★
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators}
 	\framesubtitle{Extension Manager}
 
 	\begin{itemize}
+
 		\item The Extension Manager now features an \textit{all versions} view
 			that shows detailed information about extensions.
+
 		\item The following database table is not used anymore and was removed:
 			\begin{itemize}\small
 				\item \texttt{tx\_extensionmanager\_domain\_model\_repository}
@@ -29,6 +32,11 @@
 				\item \texttt{EXT:my\_extension/Initialisation/Extensions/}
 			\end{itemize}
 			\vspace{0.2cm}
+
+		\item As we have phased out the proprietary format \texttt{.t3x} in favor
+			of \texttt{.zip} files, the feature of uploading \texttt{.t3x} files
+			has been removed.
+
 	\end{itemize}
 
 \end{frame}

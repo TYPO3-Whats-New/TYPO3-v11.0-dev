@@ -13,7 +13,7 @@
 	\framesubtitle{SelectCheckBox Groups}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
 		\item The new TCA setting \texttt{expandAll} can be used to expand
@@ -25,21 +25,20 @@
 'select_checkbox' => [
   'label' => 'Select your dinner',
   'config' => [
-        'type' => 'select',
-        'renderType' => 'selectCheckBox',
-        'appearance' => [
-            'expandAll' => true
-        ],
-        'items' => [
-            ['group 1', '--div--'],
-            ['Pizza', 1],
-            ['Pasta', 2],
-            ['Steak', 3],
-            ['group 2', '--div--'],
-            ['Salad', 4],
-            ['Ice cream', 5]
-        ]
+    'type' => 'select',
+    'renderType' => 'selectCheckBox',
+    'appearance' => [
+      'expandAll' => true
+    ],
+    'items' => [
+      ['group 1', '--div--'],
+      ['Pizza', 1],
+      ['Pasta', 2],
+      ['group 2', '--div--'],
+      ['Salad', 3],
+      ['Ice cream', 4]
     ]
+  ]
 ]
 \end{lstlisting}
 

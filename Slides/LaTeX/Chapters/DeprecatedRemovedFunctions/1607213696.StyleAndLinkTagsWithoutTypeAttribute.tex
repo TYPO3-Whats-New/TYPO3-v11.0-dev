@@ -1,0 +1,25 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 45512 | No type attributes for style and link tags
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{HTML tags \texttt{<style>} and \texttt{<link>}}
+
+	\begin{itemize}
+		\item The HTML tags \texttt{<style>} and \texttt{<link>}} do not use the
+			attribute \texttt{type} by default anymore
+		\item This change applies to the TYPO3 backend and frontend output
+		\item If required, the attribute can be re-added using TypoScript options
+			or by Fluid AssetCollector attributes
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

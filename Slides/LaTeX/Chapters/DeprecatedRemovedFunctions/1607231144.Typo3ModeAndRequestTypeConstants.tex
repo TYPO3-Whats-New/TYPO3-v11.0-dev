@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 92947 | Deprecate TYPO3_MODE and TYPO3_REQUESTTYPE constants
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Constants \texttt{TYPO3\_MODE} and \texttt{TYPO3\_REQUESTTYPE}}
+
+	\begin{itemize}
+		\item The following global constants have been marked as \textbf{deprecated}:
+			\begin{itemize}\small
+				\item \texttt{TYPO3\_MODE}
+				\item \texttt{TYPO3\_REQUESTTYPE}
+				\item \texttt{TYPO3\_REQUESTTYPE\_FE}
+				\item \texttt{TYPO3\_REQUESTTYPE\_BE}
+				\item \texttt{TYPO3\_REQUESTTYPE\_CLI}
+				\item \texttt{TYPO3\_REQUESTTYPE\_AJAX}
+				\item \texttt{TYPO3\_REQUESTTYPE\_INSTALL}
+			\end{itemize}\normalsize
+			\vspace{0.2cm}
+
+		\item Extension developers are highly encouraged to drop the usage of
+			these constants and prepare their extensions for TYPO3 v11.
+		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Deprecation-92947-DeprecateTYPO3_MODEAndTYPO3_REQUESTTYPEConstants.html}{change log}
+			for migration options.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

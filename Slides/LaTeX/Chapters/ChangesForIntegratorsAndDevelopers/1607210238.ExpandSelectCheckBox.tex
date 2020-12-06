@@ -19,7 +19,7 @@
 		\item The new TCA setting \texttt{expandAll} can be used to expand
 			grouped checkboxes by default.
 		\item As this is a display behavior, the setting needs to be placed
-		 	in \texttt{['config']['appearance']}.
+		 	in \smaller\texttt{['config']['appearance']}\normalsize
 		\item For example:
 \begin{lstlisting}
 'select_checkbox' => [
@@ -27,9 +27,7 @@
   'config' => [
     'type' => 'select',
     'renderType' => 'selectCheckBox',
-    'appearance' => [
-      'expandAll' => true
-    ],
+    'appearance' => [ 'expandAll' => true ],
     'items' => [
       ['group 1', '--div--'],
       ['Pizza', 1],

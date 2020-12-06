@@ -1,0 +1,31 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 87301 | Secure cookies enabled by default
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{Link Validator}
+
+	\begin{itemize}
+		\item To enhance the security, TYPO3 v11 does not expose the same cookie
+			for HTTP and HTTPS connections, if the instance is in the HTTPS context.
+
+			\begin{itemize}
+				\item If the site runs on HTTPS: the cookie is only exposed via HTTPS.
+				\item If the site runs on HTTP: the cookie is available via HTTP and HTTPS.
+			\end{itemize}
+
+		\item As part of this change, the following global configuration has been removed:
+		 	\smaller\texttt{\$TYPO3\_CONF\_VARS[SYS][cookieSecure]}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

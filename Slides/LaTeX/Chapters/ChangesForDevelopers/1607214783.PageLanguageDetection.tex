@@ -1,0 +1,31 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 23736 | Page Language detection set earlier in Frontend Request Process
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Page Language Detection}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Translated page records (based on the fallback handling in the Site
+			Configuration) are now available at a much earlier stage
+		\item This change was implemented to address a conceptual issue when
+			accessing translated page records
+		\item As a consequence, TypoScript conditions based on the page record
+			possibly return different results now
+		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-23736-PageLanguageDetectionSetEarlierInFrontendRequestProcess.html}{change log}
+			for further details and migration options
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

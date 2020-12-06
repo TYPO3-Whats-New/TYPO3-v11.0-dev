@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92562 | Frontend groups resolved directly after the Frontend User itself
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Frontend User Groups}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item The frontend user groups are now resolved in an earlier state of
+			the frontend request.
+		\item This allows PSR-15 middlewares to properly work with these user groups.
+		\item The functionality has been moved from TSFE into middleware,
+			which decouples the user authentication from the TSFE object.
+		\item Developers of custom authentication services are encouraged to
+			re-test their code in TYPO3 v11.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

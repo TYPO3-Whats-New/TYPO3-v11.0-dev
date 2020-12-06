@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92529 | All Fluid widget functionality removed
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Extbase/Fluid: Widgets}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Fluid "widgets" and all widget functionality have been removed.
+		\item The technology violates the design pattern "separation of concern"
+			and caused problems in regards to using PSR-7 request objects in Extbase.
+		\item \textbf{Impact:}
+			\begin{itemize}
+				\item Fluid templates that use an existing widget will no longer work.
+				\item Custom widgets will no longer work and have to be replaced.
+			\end{itemize}
+		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.0/Breaking-92529-AllFluidWidgetFunctionalityRemoved.html}{change log}
+			for further details.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

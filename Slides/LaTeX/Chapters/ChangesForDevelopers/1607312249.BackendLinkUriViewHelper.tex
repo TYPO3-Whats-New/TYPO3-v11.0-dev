@@ -13,7 +13,7 @@
 	\framesubtitle{Backend ViewHelpers}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
 		\item A new optional attribute \texttt{defaultValues} was added to the following
@@ -27,7 +27,8 @@
 		\item The argument can be used to prefill fields with default values.
 		\item For example:
 \begin{lstlisting}
-<be:link.newRecord table="tt_content" pid="17" defaultValues="{tt_content: {header: 'value'}}" returnUrl="foo/bar">
+<be:link.newRecord table="tt_content" pid="17" returnUrl="foo/bar"
+  defaultValues="{tt_content: {header: 'value'}}">
   New record
 </be:link.newRecord>
 \end{lstlisting}

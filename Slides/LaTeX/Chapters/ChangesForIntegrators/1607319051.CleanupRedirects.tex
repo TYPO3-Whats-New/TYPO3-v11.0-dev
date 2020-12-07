@@ -12,6 +12,9 @@
 	\frametitle{Changes for Integrators}
 	\framesubtitle{Cealnup Redirects}
 
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
 	\begin{itemize}
 		\item A new CLI command can delete redirects that match certain criteria:
 			\begin{itemize}
@@ -23,6 +26,10 @@
 			\end{itemize}
 		\item The command can also run as a Scheduler task.
 		\item Redirects can be marked as "protected" to prevent their deletion.
+		\item For example:
+\begin{lstlisting}
+vendor/bin/typo3 redirects:cleanup --domain example.com --age 90 --path "/old-page%"
+\end{lstlisting}
 
 	\end{itemize}
 \end{frame}

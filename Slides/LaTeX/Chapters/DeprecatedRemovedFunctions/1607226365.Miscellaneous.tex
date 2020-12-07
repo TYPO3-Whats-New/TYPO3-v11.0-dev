@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Breaking | 92941 | lockToIP UserTsConfig option removed
 % Breaking | 91782 | lockToDomain feature for frontend users / groups and backend users / groups removed
+% Breaking | 92838 | Additional workspace services dropped
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -17,6 +18,23 @@
 		\item The User TSconfig option \texttt{lockToIP} has been removed.
 		\item The function "\textbf{lock to domain}" has been removed for frontend/backend
 			users and groups.
+		\item The following Workspaces-related classes and interfaces have been removed:
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Workspaces\textbackslash
+					ColumnDataProviderInterface}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Workspaces\textbackslash
+					Service\textbackslash
+					AdditionalColumnService}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Workspaces\textbackslash
+					Service\textbackslash
+					AdditionalResourceService}
+			\end{itemize}\normalsize
 	\end{itemize}
 
 \end{frame}

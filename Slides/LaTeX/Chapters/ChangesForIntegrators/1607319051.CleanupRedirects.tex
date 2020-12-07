@@ -26,9 +26,10 @@
 			\end{itemize}
 		\item The command can also run as a Scheduler task.
 		\item Redirects can be marked as "protected" to prevent their deletion.
-		\item For example:
+		\item For example:\newline
+			\smaller(delete all redirects that start with \texttt{/foobar} and are older than 90 days)\normalsize
 \begin{lstlisting}
-vendor/bin/typo3 redirects:cleanup --domain example.com --age 90 --path "/old-page%"
+vendor/bin/typo3 redirects:cleanup --age 90 --path "/foobar%"
 \end{lstlisting}
 
 	\end{itemize}

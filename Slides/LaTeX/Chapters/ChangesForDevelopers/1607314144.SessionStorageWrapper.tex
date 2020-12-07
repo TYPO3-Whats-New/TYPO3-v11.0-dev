@@ -1,0 +1,47 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 91738 | Introduce wrapper for sessionStorage
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Session Storage Wrapper}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item A new wrapper class has been introduced to store data temporarily
+			during a session life time.
+		\item \texttt{TYPO3\textbackslash
+			CMS\textbackslash
+			Core\textbackslash
+			Storage\textbackslash
+			BrowserSession}
+		\item The following API methods are available:
+
+			\begin{itemize}\smaller
+				\item \texttt{get(key)}\newline
+					To fetch the data based on a given key.
+				\item \texttt{set(key, value)}\newline
+					To set/override a key with arbitrary content.
+				\item \texttt{isset(key)}\newline
+					To check if a key is in use.
+				\item \texttt{unset(key)}\newline
+					To remove a key from the storage.
+				\item \texttt{clear()}\newline
+					To empty the storage and clear all data.
+				\item \texttt{unsetByPrefix(prefix)}\newline
+				 	To clear all data that have keys starting with a specific prefix.
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

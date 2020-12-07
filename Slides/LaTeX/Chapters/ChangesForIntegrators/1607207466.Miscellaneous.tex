@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Important | 91888 | System extension about merged into backend system extension
 % Breaking | 92940 | Global option lockBeUserToDBmounts removed
+% Breaking | 92837 | Removed setting mod.web_layout.disableAdvanced
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators}
@@ -20,6 +21,8 @@
 		\item The following system-wide setting has been removed to harden the security
 			(it is now deemed as activated):\newline
 			\small\texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['BE']['lockBeUserToDBmounts']}\normalsize
+		\item The following TSconfig setting has been removed:\newline
+			\small{mod.web\_layout.disableAdvanced}
 	\end{itemize}
 
 \end{frame}

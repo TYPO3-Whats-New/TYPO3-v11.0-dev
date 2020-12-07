@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92462 | Add optional defaultValues argument to newRecord ViewHelpers
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Backend ViewHelpers}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item A new optional attribute \texttt{defaultValues} was added to the following
+			backend ViewHelpers:
+
+			\begin{itemize}\smaller
+				\item \texttt{be:uri.newRecord}
+				\item \texttt{be:link.newRecord}
+			\end{itemize}\normalsize
+
+		\item The argument can be used to prefill fields with default values.
+		\item For example:
+\begin{lstlisting}
+<be:link.newRecord table="tt_content" pid="17" defaultValues="{tt_content: {header: 'value'}}" returnUrl="foo/bar">
+  New record
+</be:link.newRecord>
+\end{lstlisting}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

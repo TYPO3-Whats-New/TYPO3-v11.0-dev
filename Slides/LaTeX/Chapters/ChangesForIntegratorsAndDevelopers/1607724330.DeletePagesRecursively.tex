@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92560 | Backend editors can always delete pages recursive
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Recursive Page Deletion}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item As recursive page deletion is now always enabled and can't be disabled,
+			the following implications affect integrators and developers:
+		\item The following TSconfig settings have been removed:
+
+			\begin{itemize}
+				\item \texttt{setup.default.recursiveDelete}
+				\item \texttt{setup.override.recursiveDelete}
+				\item \texttt{setup.fields.recursiveDelete.disabled}
+			\end{itemize}
+
+		\item On a PHP level, the property \texttt{DataHandler->deleteTree} has been removed.
+		\item The backend user setting \texttt{uc\['recursiveDelete'\]} has removed.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

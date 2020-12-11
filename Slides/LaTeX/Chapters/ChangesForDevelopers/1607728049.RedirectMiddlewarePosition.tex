@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92352 | New default position for redirect middleware
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{"Redirect" Middleware Position}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item The "Redirect" middleware has a new default position in the middleware stack.
+		\item TYPO3 now executes
+			\small\texttt{cms-redirects/redirecthandler}\normalsize
+			\textbf{before}
+			\texttt{cms-redirects/base-redirect-resolver}\normalsize
+\begin{lstlisting}
+...
+typo3/cms-redirects/redirecthandler
+typo3/cms-frontend/base-redirect-resolver
+...
+\end{lstlisting}
+
+		\item This change may affect the redirect behavior in some rare cases.
+		\item Developers are adviced to check the position of your custom middlewares.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

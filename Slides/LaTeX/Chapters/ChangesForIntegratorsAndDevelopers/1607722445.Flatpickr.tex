@@ -16,13 +16,14 @@
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item We introduced a new datetime picker to the TYPO3 backend:\newline
+		\item New datetime picker has been introduced to the TYPO3 backend:\newline
 			"\href{https://flatpickr.js.org/}{flatpickr}"
-			is lightweight, powerful, and doesn't depend on any libraries.
+			is "lean", lightweight, and doesn't depend on any libraries.
 		\item This change has several implications, most of which affect developers:
 
 			\begin{itemize}\small
-				\item Initializing all datetime pickers at once triggers a deprecation warning.
+				\item Initializing all datetime pickers at once triggers a deprecation warning:\newline
+					\texttt{DateTimePicker.initialize()}.
 				\item Option to add/subtract a date or time range in the FormEngine has been removed.
 			\end{itemize}
 

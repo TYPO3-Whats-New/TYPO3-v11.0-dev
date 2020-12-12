@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93023 | Introduce UserSession and UserSessionManager
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Session Handling}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item The session handling in the TYPO3 Core has been significantly restructured.
+		\item It is not part of the user authentication objects anymore,
+			but has been moved into dedicated classes:
+
+			\begin{itemize}
+				\item \texttt{UserSession}
+				\item \texttt{UserSessionManager}
+			\end{itemize}
+
+		\item This leads to a centralized handling of sessions.
+		\item The \texttt{UserSessionManager} should be used as a factory to
+			create new sessions for various use-cases.
+		\item See
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Feature-93023-IntroduceUserSessionAndUserSessionManager.html}{change log}
+			for further details.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

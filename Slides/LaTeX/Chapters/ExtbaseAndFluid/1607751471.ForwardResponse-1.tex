@@ -1,0 +1,32 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92815 | Introduce ForwardResponse for extbase
+% Deprecation | 92815 | ActionController::forward() is deprecated
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{ForwardResponse} (1)
+
+	\begin{itemize}
+		\item The following class has been introduced to forward a request to
+			another controller action:
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Extbase\textbackslash
+				Http\textbackslash
+				ForwardResponse}\normalsize
+		\item This is a PSR-7 compatible way to return a response object.
+		\item The old method has been marked as deprecated:\newline
+			\small\texttt{ActionController::forward()}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

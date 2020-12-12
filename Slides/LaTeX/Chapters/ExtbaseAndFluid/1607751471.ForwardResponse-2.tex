@@ -7,7 +7,6 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Feature | 92815 | Introduce ForwardResponse for extbase
-% Deprecation | 92815 | ActionController::forward() is deprecated
 
 \begin{frame}[fragile]
 	\frametitle{Extbase and Fluid}
@@ -17,15 +16,9 @@
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The following class has been introduced to forward a request to
-			another controller action:
-			\small\texttt{TYPO3\textbackslash
-				CMS\textbackslash
-				Extbase\textbackslash
-				Http\textbackslash
-				ForwardResponse}\normalsize
-		\item This is a PSR-7 compatible way to return a response object.
+		\item Code example:
 \begin{lstlisting}
+<?php
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Http\ForwardResponse;
@@ -44,9 +37,6 @@ class FooController extends ActionController
   }
 }
 \end{lstlisting}
-
-		\item The old method has been marked as deprecated:\newline
-			\small\texttt{ActionController::forward()}\normalsize
 
 	\end{itemize}
 

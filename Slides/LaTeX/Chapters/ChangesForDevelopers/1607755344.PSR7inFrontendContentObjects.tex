@@ -17,17 +17,14 @@
 
 	\begin{itemize}
 		\item PSR-7 standardized request objects have been added to frontend ContentObjects.
-		\item This means that any kind of custom cObject using PHP code can now
-			access the PSR-7 Request object to fetch information about the current
-			request.
+		\item Any kind of custom cObject using PHP code can now access the PSR-7
+			Request object to fetch information about the current request.
 
 		\item For example:
-
 \begin{lstlisting}
 page.10 = USER
 page.10.userFunc = MyVendor\MyPackage\Frontend\MyClass->myMethod
 \end{lstlisting}
-
 \begin{lstlisting}
 <?php
 namespace MyVendor\MyPackage\Frontend;

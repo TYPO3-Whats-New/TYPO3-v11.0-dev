@@ -20,12 +20,20 @@
 		\item It is not part of the user authentication objects anymore,
 			but has been moved into dedicated classes:
 
-			\begin{itemize}
-				\item \texttt{UserSession}
-				\item \texttt{UserSessionManager}
+			\begin{itemize}\small
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Session\textbackslash
+					UserSession}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Session\textbackslash
+					UserSessionManager}
 			\end{itemize}
 
-		\item This leads to a centralized handling of sessions.
+		\item This change leads to a centralized handling of sessions.
 		\item The \texttt{UserSessionManager} should be used as a factory to
 			create new sessions for various use-cases.
 		\item See

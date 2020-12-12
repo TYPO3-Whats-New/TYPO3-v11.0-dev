@@ -23,7 +23,7 @@
 			and
 			\href{https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template}{template-elements}.
 		\item The functionality was inspired by \href{https://lit-html.polymer-project.org/}{lit-html}.
-		\item Code example:
+		\item (Simple) code example:
 \begin{lstlisting}
 import {Template, html, unsafe} from 'TYPO3/CMS/Backend/Element/Template';
 const value = 'World';
@@ -31,7 +31,9 @@ const target = document.getElementById('target');
 const template = html`<div>Hello ${value}!</div>`;
 template.mountTo(target, true);
 \end{lstlisting}
-		\item See change log for further details and code examples.
+		\item See
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/master/Feature-91810-IntroduceClient-sideTemplatingEngine.html}{change log}
+			for further details and code examples.
 
 	\end{itemize}
 \end{frame}

@@ -18,9 +18,9 @@
 	\begin{itemize}
 		\item The "Redirect" middleware has a new default position in the middleware stack.
 		\item TYPO3 now executes
-			\small\texttt{cms-redirects/redirecthandler}\normalsize
+			\small\texttt{cms-redirects/redirecthandler}\normalsize\newline
 			\textbf{before}
-			\texttt{cms-redirects/base-redirect-resolver}\normalsize
+			\texttt{cms-frontend/base-redirect-resolver}\normalsize
 \begin{lstlisting}
 ...
 typo3/cms-redirects/redirecthandler
@@ -28,7 +28,7 @@ typo3/cms-frontend/base-redirect-resolver
 ...
 \end{lstlisting}
 
-		\item This change may affect the redirect behavior in some rare cases.
+		\item The change of the order was a feature toggle in TYPO3 v10.
 		\item Developers are adviced to check the position of your custom middlewares.
 
 	\end{itemize}

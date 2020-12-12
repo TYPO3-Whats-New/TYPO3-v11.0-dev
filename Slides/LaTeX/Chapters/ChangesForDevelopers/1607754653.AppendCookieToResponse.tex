@@ -1,0 +1,26 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93011 | Authentication-related cookies are attached to PSR-7 Responses
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Cookies set in the PSR-7 Response}
+
+	\begin{itemize}
+		\item TYPO3 now attaches cookie information for the user session information
+			in a PSR-15 middleware by default.
+		\item Previously, cookies were added using PHP's native functions
+			\small\texttt{header()} and \texttt{setcookie()}\normalsize.
+		\item The new logic allows developers to attach the cookies to a PSR-7
+			response object by using\newline
+			\small\texttt{\$GLOBALS[BE\_USER]->appendCookieToResponse()}\normalsize.
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

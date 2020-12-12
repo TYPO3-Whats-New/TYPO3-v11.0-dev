@@ -10,32 +10,17 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Developers}
-	\framesubtitle{PSR-7 Responses in ContentObjects}
-
-	% decrease font size for code listing
-	\lstset{basicstyle=\tiny\ttfamily}
+	\framesubtitle{PSR-7 Responses in ContentObjects (1)}
 
 	\begin{itemize}
 		\item PSR-7 standardized request objects have been added to frontend ContentObjects.
 		\item Any kind of custom cObject using PHP code can now access the PSR-7
 			Request object to fetch information about the current request.
-\begin{lstlisting}
-page.10 = USER
-page.10.userFunc = Vendor\FooBar\Frontend\MyClass->test
-\end{lstlisting}
-\begin{lstlisting}
-<?php
-namespace Vendor\FooBar\Frontend;
-class MyClass
-{
-  public function test(string $content, array $config, ServerRequestInterface $request)
-  {
-    $myValue = $request->getQueryParams()['myGetParameter'];
-    $normalizedParams = $request->getAttribute('normalizedParams');
-    // ...
-  }
-}
-\end{lstlisting}
+		\item This functionality should be used instead of superglobal variables
+			such as\newline
+			\texttt{\$\_GET}, \texttt{\$\_POST}, \texttt{\$\_SERVER},
+			or TYPO3's API methods \texttt{GeneralUtility::_GP()} and
+			\texttt{GeneralUtility::getIndpEnv()}.
 
 	\end{itemize}
 \end{frame}

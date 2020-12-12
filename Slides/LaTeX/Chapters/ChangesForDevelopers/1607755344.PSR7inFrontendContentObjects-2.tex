@@ -1,0 +1,42 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92984 | PSR-7 Request available in Frontend ContentObjects
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{PSR-7 Responses in ContentObjects (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item Code example:
+\begin{lstlisting}
+page.10 = USER
+page.10.userFunc = Vendor\FooBar\Frontend\MyClass->test
+\end{lstlisting}
+		\item Request available as a PSR-7 Request object in PHP:
+\begin{lstlisting}
+<?php
+namespace Vendor\FooBar\Frontend;
+class MyClass
+{
+  public function test(string $content, array $config, ServerRequestInterface $request)
+  {
+    $myValue = $request->getQueryParams()['myGetParameter'];
+    $normalizedParams = $request->getAttribute('normalizedParams');
+    // ...
+  }
+}
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

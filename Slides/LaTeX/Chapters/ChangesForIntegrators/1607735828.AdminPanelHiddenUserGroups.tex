@@ -1,0 +1,28 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92499 | AdminPanel does not preview hidden Frontend User Groups
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators}
+	\framesubtitle{Admin Panel}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item When rendering a page, the Admin Panel offers a list of frontend
+			user groups.
+		\item This list now only contains enabled user groups (hidden/disabled
+			groups are not listed anymore).
+		\item This change was made to ensure consistency for the authentication
+			process.
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

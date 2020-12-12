@@ -9,6 +9,7 @@
 % Breaking | 92941 | lockToIP UserTsConfig option removed
 % Breaking | 91782 | lockToDomain feature for frontend users / groups and backend users / groups removed
 % Breaking | 92838 | Additional workspace services dropped
+% Breaking | 93047 | Removed property sendNoCacheHeaders in AbstractUserAuthentication
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -35,6 +36,12 @@
 					Service\textbackslash
 					AdditionalResourceService}
 			\end{itemize}\normalsize
+
+		\item The property \texttt{sendNoCacheHeaders} has been removed from the following class:\newline
+			\smaller\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Authentication\textbackslash
+				AbstractUserAuthentication}\normalsize
 
 	\end{itemize}
 

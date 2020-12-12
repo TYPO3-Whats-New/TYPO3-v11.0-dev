@@ -10,6 +10,7 @@
 % Breaking | 91782 | lockToDomain feature for frontend users / groups and backend users / groups removed
 % Breaking | 92838 | Additional workspace services dropped
 % Breaking | 93047 | Removed property sendNoCacheHeaders in AbstractUserAuthentication
+% Deprecation | 93038 | ReferenceIndex runtime cache
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -42,6 +43,13 @@
 				CMS\textbackslash
 				Authentication\textbackslash
 				AbstractUserAuthentication}\normalsize
+
+		\item The following methods of the \texttt{ReferenceIndex} class have been marked as deprecated:
+
+			\begin{itemize}\smaller
+				\item \texttt{ReferenceIndex->enableRuntimeCache()}
+				\item \texttt{ReferenceIndex->disableRuntimeCache()}
+			\end{itemize}\normalsize
 
 	\end{itemize}
 

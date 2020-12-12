@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 88276 | TypoScript Condition for page layout
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators}
+	\framesubtitle{TypoScript Condition: \texttt{pagelayout}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item A new condition lets integrators check for the defined backend
+			layout of a page.
+		\item The condition is available in the frontend and backend.
+		\item For example:\newline
+\begin{lstlisting}
+# Using backend_layout records
+[tree.pagelayout == 2]
+  page.1 = TEXT
+  page.1.value = Layout 2
+[END]
+
+# Using TSconfig provider of backend layouts
+[tree.pagelayout == "pagets__Home"]
+  page.1 = TEXT
+  page.1.value = Layout Home
+[END]
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

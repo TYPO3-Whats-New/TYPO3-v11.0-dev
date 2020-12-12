@@ -1,0 +1,37 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 93023 | Reworked session handling
+% Breaking | 93002 | Support for session transfer via FE_SESSION_KEY removed
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Session Handling}
+
+	\begin{itemize}
+		\item As part of the session handling restructure, some properties and methods
+			of the following class have been marked as deprecated:\newline
+			\vspace{0.1cm}
+			\smaller\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Authentication\textbackslash\}
+
+			\begin{itemize}\smaller
+				\item \texttt{AbstractUserAuthentication->createSessionId()}
+				\item \texttt{AbstractUserAuthentication->fetchUserSession()}
+			\end{itemize}
+
+		\item Requesting the frontend by using the following GET parameter does
+			not have an effect anymore: \small\texttt{FE_SESSION_KEY}\normalsize\newline
+			\smaller(an existing session will not be picked up)\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

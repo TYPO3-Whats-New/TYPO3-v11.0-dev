@@ -9,7 +9,6 @@
 % Breaking | 92941 | lockToIP UserTsConfig option removed
 % Breaking | 91782 | lockToDomain feature for frontend users / groups and backend users / groups removed
 % Breaking | 92838 | Additional workspace services dropped
-% Deprecation | 93023 | Reworked session handling
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -36,18 +35,6 @@
 					Service\textbackslash
 					AdditionalResourceService}
 			\end{itemize}\normalsize
-
-		\item As part of the session handling restructure, some properties and methods
-			of the following class have been marked as deprecated:\newline
-			\smaller\texttt{TYPO3\textbackslash
-				CMS\textbackslash
-				Authentication\textbackslash
-				AbstractUserAuthentication}
-
-			\begin{itemize}\smaller
-				\item \texttt{AbstractUserAuthentication->createSessionId()}
-				\item \texttt{AbstractUserAuthentication->fetchUserSession()}
-			\end{itemize}
 
 	\end{itemize}
 

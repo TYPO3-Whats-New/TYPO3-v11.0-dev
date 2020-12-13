@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 90799 | Dependency injection with non-public properties has been removed
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{Dependecy Injection}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{10}{12}\ttfamily}
+
+	\begin{itemize}
+		\item The previously deprecated option to use dependency injection (DI)
+			for non-public properties has been removed.
+		\item The code example below shows a working solution\newline
+			\small(note the \textbf{public} visibility!)\normalsize
+\begin{lstlisting}
+class Foo
+{
+  /**
+   * @var Service
+   * @TYPO3\CMS\Extbase\Annotation\Inject
+   */
+  public $service;
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -6,7 +6,7 @@
 % @link		http://typo3.org/download/release-notes/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
-% Deprecation | 93038 | ReferenceIndex runtime cache
+% Deprecation | 92607 | Deprecated GeneralUtility::uniqueList
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -18,6 +18,9 @@
 				\item \texttt{ReferenceIndex->enableRuntimeCache()}
 				\item \texttt{ReferenceIndex->disableRuntimeCache()}
 			\end{itemize}\normalsize
+
+		\item The method \texttt{GeneralUtility::uniqueList()} has been marked as deprecated
+			\small(use the new method \texttt{StringUtility::uniqueList()} instead)\normalsize
 
 	\end{itemize}
 

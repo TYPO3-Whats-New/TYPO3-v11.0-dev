@@ -10,6 +10,7 @@
 % Breaking | 92801 | Removed Failed Login functionality from User Authentication object
 % Breaking | 92989 | AbstractUserAuthentication->loginFailure removed
 % Breaking | 92990 | AbstractUserAuthentication->svConfig removed
+% Deprecation | 93023 | Reworked session handling
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -34,6 +35,14 @@
 				\item \texttt{AbstractUserAuthentication->warningMax}
 				\item \texttt{AbstractUserAuthentication->checkLogFailures()}
 			\end{itemize}\normalsize
+
+		\item As part of the session handling restructure, these methods have been marked as deprecated:
+
+			\begin{itemize}\smaller
+				\item \texttt{AbstractUserAuthentication->createSessionId()}
+				\item \texttt{AbstractUserAuthentication->fetchUserSession()}
+			\end{itemize}\normalsize
+
 
 	\end{itemize}
 

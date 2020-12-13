@@ -7,7 +7,6 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Breaking | 92807 | Removed feature for keeping session data on frontend user logout
-% Breaking | 92801 | Removed Failed Login functionality from User Authentication object
 
 \begin{frame}[fragile]
 	\frametitle{Miscellaneous}
@@ -16,9 +15,6 @@
 	\begin{itemize}
 		\item TYPO3 removes all session data on frontend user logout\newline
 			\small(this may affect installations that rely on keeping the session, e.g. for cart functionality)\normalsize
-
-		\item The property \small\texttt{auth\_timeout\_field}\normalsize of class
-			\small\texttt{AbstractUserAuthentication}\normalsize has been removed.
 
 	\end{itemize}
 

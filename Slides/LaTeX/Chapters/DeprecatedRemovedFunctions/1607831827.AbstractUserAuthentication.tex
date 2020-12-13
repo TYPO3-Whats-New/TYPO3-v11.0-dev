@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92802 | User-database-based authentication timeout field removed
+% Breaking | 92801 | Removed Failed Login functionality from User Authentication object
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Class \texttt{AbstractUserAuthentication}}
+
+	\begin{itemize}
+		\item The following changes are related to the class\newline
+			\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Authentication\textbackslash
+				AbstractUserAuthentication}.
+
+		\item Removed public properties and methods:
+
+			\begin{itemize}\small
+				\item \texttt{AbstractUserAuthentication->auth\_timeout\_field}
+				\item \texttt{AbstractUserAuthentication->warningEmail}
+				\item \texttt{AbstractUserAuthentication->warningPeriod}
+				\item \texttt{AbstractUserAuthentication->warningMax}
+				\item \texttt{AbstractUserAuthentication->checkLogFailures()}
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

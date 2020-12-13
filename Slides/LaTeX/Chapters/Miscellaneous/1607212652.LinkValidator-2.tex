@@ -19,8 +19,8 @@
 		\item The LinkValidator supports several link types such as
 			\small\texttt{db}\normalsize, \small\texttt{file}\normalsize,
 			\small\texttt{external}\normalsize, etc.
-		\item The type \small\texttt{linkhandler}\normalsize has been outdated
-			for a long time, and consequently removed now.
+		\item The type \small\texttt{linkhandler}\normalsize
+			has been outdated for a long time, and consequently removed now.
 		\item It's unlikely that this change requires a migration.
 		\item However, integrators should check and remove the \texttt{linkhandler}
 			type from the page TSconfig if it exists:
@@ -29,7 +29,6 @@ mod.linkvalidator.linktypes = db,file,external,linkhandler
 \end{lstlisting}
 
 		\item Also, the following configuration should not be used anymore:
-
 \begin{lstlisting}
 mod.linkvalidator.linkhandler.reportHiddenRecords = 0
 \end{lstlisting}

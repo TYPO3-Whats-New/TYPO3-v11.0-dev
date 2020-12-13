@@ -7,6 +7,7 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Deprecation | 92607 | Deprecated GeneralUtility::uniqueList
+% Breaking | 93062 | Various group-related public properties in BE_USER removed
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -17,6 +18,12 @@
 			\begin{itemize}\small
 				\item \texttt{ReferenceIndex->enableRuntimeCache()}
 				\item \texttt{ReferenceIndex->disableRuntimeCache()}
+			\end{itemize}\normalsize
+
+		\item The following methods of the \texttt{BackendUserAuthentication} class have been removed:
+			\begin{itemize}\small
+				\item \texttt{BackendUserAuthentication->groupList}
+				\item \texttt{BackendUserAuthentication->includeGroupArray}
 			\end{itemize}\normalsize
 
 		\item The method \texttt{GeneralUtility::uniqueList()} has been marked as deprecated

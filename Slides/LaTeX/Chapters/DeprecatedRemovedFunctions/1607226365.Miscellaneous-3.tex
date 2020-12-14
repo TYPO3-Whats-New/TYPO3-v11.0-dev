@@ -7,6 +7,7 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Deprecation | 92583 | Deprecate last arguments of wrapClickMenuOnIcon()
+% Deprecation | 92551 | GeneralUtility methods related to pagesl18n_cfg behavior
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -15,6 +16,21 @@
 	\begin{itemize}
 		\item Calling \texttt{BackendUtility::wrapClickMenuOnIcon()} with more
 			than 4 arguments will trigger a deprecation warning.
+		\item The following methods have been marked as deprecated:
+			\begin{itemize}
+				\item \texttt{GeneralUtility::hideIfNotTranslated()}
+				\item \texttt{GeneralUtility::hideIfDefaultLanguage()}
+			\begin{itemize}
+			\small(Use the BitSet-based PHP class
+				\smaller\texttt{
+					TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Type\textbackslash
+					Bitmask\textbackslash
+					PageTranslationVisibility}\small
+				instead)\normalsize
+
 	\end{itemize}
 
 \end{frame}

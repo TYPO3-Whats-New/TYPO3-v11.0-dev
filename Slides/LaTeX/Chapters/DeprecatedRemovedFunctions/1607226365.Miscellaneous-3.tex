@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Deprecation | 92583 | Deprecate last arguments of wrapClickMenuOnIcon()
 % Deprecation | 92551 | GeneralUtility methods related to pagesl18n_cfg behavior
+% Deprecation | 92062 | Migrate RecordListController hooks to an PSR-14 event
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -30,6 +31,20 @@
 					Type\textbackslash
 					Bitmask\textbackslash
 					PageTranslationVisibility}
+			\normalsize
+
+		\item The following hooks have been marked as deprecated:
+			\begin{itemize}\smaller
+				\item \texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['SC\_OPTIONS']['recordlist/Modules/Recordlist/index.php']['drawHeaderHook']}
+				\item \texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['SC\_OPTIONS']['recordlist/Modules/Recordlist/index.php']['drawFooterHook']}
+			\end{itemize}\normalsize
+			\small
+				Use the following PSR-14 event instead:\newline
+				\smaller\texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Recordlist\textbackslash
+					Event\textbackslash
+					RenderAdditionalContentToRecordListEvent}
 			\normalsize
 
 	\end{itemize}

@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 93003 | Limitation of PageRenderer to only render full page
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{\texttt{PageRenderer} Class}
+
+	\begin{itemize}
+		\item TYPO3's \small\texttt{PageRenderer}\normalsize class now always
+			renders the full HTML page, instead of header/footer separately.
+
+		\item As a consequence, the following constants are now protected:
+
+			\begin{itemize}\small
+				\item \texttt{PageRenderer::PART\_COMPLETE}
+				\item \texttt{PageRenderer::PART\_HEADER}
+				\item \texttt{PageRenderer::PART\_FOOTER}
+			end{itemize}
+
+		\item And \texttt{PageRenderer->render()} does not accept any method
+			arguments anymore.
+
+		\item Extensions should use custom hooks to process or manipulate header
+			or footer parts.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

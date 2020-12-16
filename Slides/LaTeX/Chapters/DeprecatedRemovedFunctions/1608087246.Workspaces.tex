@@ -6,7 +6,10 @@
 % @link		http://typo3.org/download/release-notes/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
+% Breaking | 92791 | New Placeholder records removed in Workspaces
+% Breaking | 92497 | Workspaces: Move Placeholders removed
 % Breaking | 92206 | Remove workspace swapping of elements
+% Breaking | 92598 | Workspace-overlays auto-fix the PID value for moved records
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -14,10 +17,17 @@
 
 	\begin{itemize}
 		\item Several changes have been made to the Workspaces, most of them are internal.
+		\item For example:
 
 			\begin{itemize}\small
+				\item The "New Placeholder" records have been removed
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92497-WorkspacesMovePlaceholdersRemoved.html}{92497}).
+				\item The "Move Placeholders" have been removed
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92497-WorkspacesMovePlaceholdersRemoved.html}{92497}).
 				\item The "swapping mode" of elements has been removed
-					\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92206-RemoveWorkspaceSwappingOfElements.html}{92206}).
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92206-RemoveWorkspaceSwappingOfElements.html}{92206}).
+				\item The \texttt{\_ORIG\_pid} field has a new meaning
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92598-Workspace-overlaysAuto-fixThePIDValueForMovedRecords.html}{92598}).
 			\end{itemize}
 
 	\end{itemize}

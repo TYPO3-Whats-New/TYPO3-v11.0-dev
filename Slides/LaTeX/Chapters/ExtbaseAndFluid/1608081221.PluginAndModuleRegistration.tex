@@ -23,13 +23,17 @@
 			\small\texttt{ExtensionUtility::configurePlugin()}\normalsize
 			and
 			\small\texttt{ExtensionUtility::registerModule()}.
-		\item Example:
+		\item For example:
 \begin{lstlisting}
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
   'Form',
   'Formframework',
-  [\TYPO3\CMS\Form\Controller\FormFrontendController::class => 'render, perform'],
-  [\TYPO3\CMS\Form\Controller\FormFrontendController::class => 'perform'],
+  [
+    \TYPO3\CMS\Form\Controller\FormFrontendController::class => 'render, perform'
+  ],
+  [
+    \TYPO3\CMS\Form\Controller\FormFrontendController::class => 'perform'
+  ],
   \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 \end{lstlisting}

@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92609 | Use controller classes when registering plugins/modules
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{Plugin/Module Registration}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Registering plugins/modules require a fully-qualified class names
+			and no vendor name as the extension name (first argument).
+		\item This was marked as deprecated in TYPO3 v10 and is now mandatory.
+		\item This applies to
+			\small\texttt{ExtensionUtility::configurePlugin()}\normalsize
+			and
+			\small\texttt{ExtensionUtility::registerModule()}.
+		\item Example:
+\begin{lstlisting}
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+  'Form',
+  'Formframework',
+  [\TYPO3\CMS\Form\Controller\FormFrontendController::class => 'render, perform'],
+  [\TYPO3\CMS\Form\Controller\FormFrontendController::class => 'perform'],
+  \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+);
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

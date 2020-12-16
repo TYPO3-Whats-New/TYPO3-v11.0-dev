@@ -1,0 +1,32 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 91562 | cObject TEMPLATE removed
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators}
+	\framesubtitle{Content Object \small\texttt{TEMPLATE}\normalsize}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item The cObject \small\texttt{TEMPLATE}\normalsize has been removed.
+		\item The following related the PHP class has been removed:\newline
+			\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Frontend\textbackslash
+				ContentObject\textbackslash
+				TemplateContentObject}.
+		\item The content object was used to render marker-based templates.
+		\item The successor \small\texttt{FLUIDTEMPLATE}\normalsize acts as a
+			replacement for marker-based templates today.
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

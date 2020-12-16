@@ -10,6 +10,7 @@
 % Breaking | 92497 | Workspaces: Move Placeholders removed
 % Breaking | 92206 | Remove workspace swapping of elements
 % Breaking | 92598 | Workspace-overlays auto-fix the PID value for moved records
+% Deprecation | 92598 | Workspace-related methods fixVersioningPid
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -29,6 +30,22 @@
 				\item The \texttt{\_ORIG\_pid} field has a new meaning
 					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92598-Workspace-overlaysAuto-fixThePIDValueForMovedRecords.html}{92598}).
 			\end{itemize}
+
+		\item The following two methods have been marked as deprecated:
+
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Domain\textbackslash
+					Repository\textbackslash
+					PageRepository->fixVersioningPid())
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Utility\textbackslash
+					BackendUtility::fixVersioningPid()}
+			\end{itemize}\normalsize
 
 	\end{itemize}
 

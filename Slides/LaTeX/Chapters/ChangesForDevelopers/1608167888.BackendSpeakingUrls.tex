@@ -7,6 +7,9 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Breaking | 93093 | ReworkShortcutPHPAPI
+% Deprecation | 92132 | DeprecatedShortcutPHPAPI
+% Deprecation | 93060 | ShortcutTitleMustBeSetByControllers
+% Deprecation | 93093 | DeprecateMethodNameInShortcutPHPAPI
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
@@ -16,8 +19,17 @@
 		\item The Shortcut API has been reworked to support Symfony routing to
 			resolve internal endpoints, e.g. backend modules.
 		\item This is in preparation for "speaking URLs" in the TYPO3 backend\newline
-			\small(backend users will be able to share links to specific functions/pages,
+			\small(BE users will be able to share links to specific functions/pages,
 			for example)\normalsize
+		\item Developers are adviced to review the following change logs if they
+			use the Shortcut API:
+
+			\begin{itemize}
+				\item \href{https://docs.typo3.org}{93093}: Rework Shortcut PHP API
+				\item \href{https://docs.typo3.org}{92132}: Deprecate Shortcut PHP API
+				\item \href{https://docs.typo3.org}{93060}: Shortcut title must be set by controllers
+				\item \href{https://docs.typo3.org}{93093}: Deprecate method name in Shortcut PHP API
+			\end{itemize}
 
 	\end{itemize}
 

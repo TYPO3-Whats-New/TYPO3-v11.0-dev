@@ -16,10 +16,10 @@
 		\item TYPO3 now attaches cookie information for the user session information
 			in a PSR-15 middleware by default.
 		\item Previously, cookies were added using PHP's native functions\newline
-			\small\texttt{header()} and \texttt{setcookie()}\normalsize.
+			\smaller\texttt{header()} and \texttt{setcookie()}\normalsize.
 		\item The new logic allows developers to attach the cookies to a PSR-7
 			response object by using\newline
-			\small\texttt{\$GLOBALS[BE\_USER]->appendCookieToResponse()}\normalsize.
+			\smaller\texttt{\$GLOBALS[BE\_USER]->appendCookieToResponse()}\normalsize.
 	\end{itemize}
 \end{frame}
 

@@ -13,7 +13,7 @@
 	\framesubtitle{PSR-7 Responses}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
 		\item Extbase now creates a
@@ -21,7 +21,7 @@
 			response object and passes it back through the request handling stack.
 		\item The following interfaces/classes are not used anymore and were removed:
 
-			\begin{itemize}\small
+			\begin{itemize}\smaller
 				\item \texttt{TYPO3\textbackslash
 					CMS\textbackslash
 					Extbase\textbackslash
@@ -32,7 +32,7 @@
 					Extbase\textbackslash
 					Mvc\textbackslash
 					Response}
-			\end{itemize}
+			\end{itemize}\normalsize
 
 		\item If a controller action should return custom data instead of the
 			default view, a PSR-7-compatible response object can be returned:

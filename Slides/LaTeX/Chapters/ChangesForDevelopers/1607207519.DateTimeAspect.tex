@@ -17,9 +17,13 @@
 
 	\begin{itemize}
 		\item The \texttt{DateTimeAspect} returns the timestamp as an integer now.
+		\item For example:
 \begin{lstlisting}
-$ context = GeneralUtility::makeInstance(Context::class);
-$ timestamp = $context->getPropertyFromAspect('date', 'timestamp');
+use TYPO3\CMS\Core\Context\Context;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+...
+$context = GeneralUtility::makeInstance(Context::class);
+$timestamp = $context->getPropertyFromAspect('date', 'timestamp');
 \end{lstlisting}
 
 	\end{itemize}

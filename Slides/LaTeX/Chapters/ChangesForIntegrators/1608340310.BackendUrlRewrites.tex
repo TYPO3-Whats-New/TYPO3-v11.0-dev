@@ -1,0 +1,35 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 93048 | Backend URL rewrites
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators}
+	\framesubtitle{Backend URLs}
+
+	\begin{itemize}
+		\item Backend URLs have changed in TYPO3 v11:\newline
+			\small\textbf{TYPO3 < v11:}\normalsize\newline
+			\smaller\texttt{/typo3/index.php?route=\%2Fmain}\normalsize\newline
+			\small\textbf{TYPO3 >= v11:}\normalsize\newline
+			\smaller\texttt{/typo3/record/edit}\normalsize
+
+		\item To access the TYPO3 backend, a rewrite rule has to be present in
+			the web server configuration.
+		\item This is in preparation for "speaking URLs" and deep-linking in the
+			TYPO3 backend.
+		\item In previous TYPO3 versions, the backend was explicitly excluded
+			from any URL rewriting logic.
+		\item By accessing the Install Tool, a silent update takes care of
+			adjusting the configuration file for Apache and Microsoft IIS
+			servers, if possible.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

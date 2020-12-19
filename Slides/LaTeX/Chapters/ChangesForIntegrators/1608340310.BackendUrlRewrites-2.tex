@@ -18,7 +18,6 @@
 	\begin{itemize}
 		\item If a manual adjustment of the web server configuration is required
 			(e.g. in customized setups):\newline
-			\vspace{0.2cm}
 		\smaller
 			Previous configuration:
 		\normalsize
@@ -31,7 +30,6 @@ RewriteRule ^(?:typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
 		\normalsize
 \begin{lstlisting}
 RewriteRule ^(?:fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
-
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l

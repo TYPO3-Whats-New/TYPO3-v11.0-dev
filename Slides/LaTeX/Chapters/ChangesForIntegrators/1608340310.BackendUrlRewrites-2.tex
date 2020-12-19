@@ -13,11 +13,11 @@
 	\framesubtitle{Backend URLs (2)}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item If a manual web server configuration adjustment is required
-			(e.g. in customized setups), ...\newline
+		\item If a manual adjustment of the web server configuration is required
+			(e.g. in customized setups):\newline
 
 		\smaller
 			Previous configuration:
@@ -31,15 +31,13 @@ RewriteRule ^(?:typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
 		\normalsize
 \begin{lstlisting}
 RewriteRule ^(?:fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteCond %{REQUEST_URI} ^/typo3/.*$
 RewriteRule ^typo3/(.*)$ %{ENV:CWD}typo3/index.php [QSA,L]
 \end{lstlisting}
-
-%			Additionally, make sure to use the public :php:`UriBuilder` API for all
-%			custom generated backend links.
 
 	\end{itemize}
 \end{frame}

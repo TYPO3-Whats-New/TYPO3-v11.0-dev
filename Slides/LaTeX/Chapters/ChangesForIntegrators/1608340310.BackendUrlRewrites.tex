@@ -15,14 +15,14 @@
 	\begin{itemize}
 		\item Backend URLs have changed in TYPO3 v11:\newline
 			\small
-				\textbf{OLD:}\tabto{1.4cm}\texttt{/typo3/index.php?route=\%2Frecord\%2Fedit\&token=...}\newline
-				\textbf{NEW:}\tabto{1.4cm}\texttt{/typo3/record/edit?token=...}
+				\textbf{OLD:}\tabto{1.2cm}\texttt{/typo3/index.php?route=\%2Frecord\%2Fedit\&token=...}\newline
+				\textbf{NEW:}\tabto{1.2cm}\texttt{/typo3/record/edit?token=...}
 			\normalsize
 
-		\item To access the TYPO3 backend, the web server configuration now
-			requires a rewrite rule.
 		\item This is in preparation for "speaking URLs" and deep-linking in the
 			TYPO3 backend.
+		\item To access the TYPO3 backend, the web server configuration now
+			requires a rewrite rule.
 		\item In previous TYPO3 versions, the backend was explicitly excluded
 			from any URL rewriting logic.
 		\item When accessing the Install Tool, a silent update takes care of

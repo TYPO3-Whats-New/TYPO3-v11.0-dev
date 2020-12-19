@@ -1,0 +1,46 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 93048 | Backend URL rewrites
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators}
+	\framesubtitle{Backend URLs (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item If a manual update of the \small\texttt{.htaccess}\normalsize
+			file is required (e.g. in customized setups), ... \newline
+		\smaller
+			Previous configuration:
+		\normalsize
+\begin{lstlisting}
+RewriteRule ^(?:typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
+\end{lstlisting}
+
+		\smaller
+			New configuration:
+		\normalsize
+\begin{lstlisting}
+RewriteRule ^(?:fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_URI} ^/typo3/.*$
+RewriteRule ^typo3/(.*)$ %{ENV:CWD}typo3/index.php [QSA,L]
+\end{lstlisting}
+
+%			Additionally, make sure to use the public :php:`UriBuilder` API for all
+%			custom generated backend links.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

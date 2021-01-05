@@ -8,17 +8,17 @@
 % Feature | 91859 | Allow SelectCheckBox groups to be initally expanded
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{SelectCheckBox Groups}
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{SelectCheckBox groupée}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item The new TCA setting \texttt{expandAll} can be used to expand
-			grouped checkboxes by default. The setting needs to be placed in\newline
+		\item Le paramètre TCA \texttt{expandAll} s'utilise pour développer les
+            cases à cocher groupées par défaut. Le paramètre doit être placé sous\newline
 			\smaller\texttt{['config']['appearance']}\normalsize
-		\item For example:
+		\item Par exemple~:
 \begin{lstlisting}
 'select_checkbox' => [
   'label' => 'Select your dinner',

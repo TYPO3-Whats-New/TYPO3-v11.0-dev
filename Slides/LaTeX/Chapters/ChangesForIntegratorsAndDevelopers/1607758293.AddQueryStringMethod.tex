@@ -8,20 +8,20 @@
 % Breaking | 93041 | Remove TypoScript option addQueryString.method
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{TypoScript Option \texttt{addQueryString.method}}
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Option TypoScript \texttt{addQueryString.method}}
 
 	\begin{itemize}
-		\item The TypoScript option \texttt{addQueryString.method} has been removed.
-		\item This has the following implications:
+		\item L'option TypoScript \texttt{addQueryString.method} est retirée.
+		\item L'impact est le suivant~:
 
 			\begin{itemize}\smaller
-				\item \texttt{UriBuilder->setAddQueryStringMethod()} now triggers a deprecation notice.
-				\item \texttt{ContentObjectRenderer->getQueryArguments()} with more than one argument has no effect anymore.
+				\item \texttt{UriBuilder->setAddQueryStringMethod()} déclenche une notice de dépréciation.
+				\item Appeler \texttt{ContentObjectRenderer->getQueryArguments()} avec plus d'un argument n'as plus d'effet.
 			\end{itemize}\normalsize
 
-		\item Additionally, using the argument \texttt{addQueryStringMethod} in
-			the following ViewHelpers triggers a deprecation notice:
+		\item De plus, utiliser l'argument \texttt{addQueryStringMethod} dans
+			ces ViewHelpers déclenche une notice de dépréciation~:
 
 			\begin{itemize}\smaller
 				\item \texttt{<f:form>}

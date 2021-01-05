@@ -8,15 +8,15 @@
 % Breaking | 93003 | Limitation of PageRenderer to only render full page
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{Class \texttt{PageRenderer}}
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{Classe \texttt{PageRenderer}}
 
 	\begin{itemize}
-		\item TYPO3's \small\texttt{PageRenderer}\normalsize
-			class now always renders the full HTML page, instead of
-			header/footer separately.
+		\item La classe TYPO3 \small\texttt{PageRenderer}\normalsize
+			effectue le rendu complet de la page HTML au lieu de gérer l'en-tête et
+			le pied de page séparément.
 
-		\item As a consequence, the following constants are now protected:
+		\item En conséquence, ces constantes sont passées protégées~:
 
 			\begin{itemize}\small
 				\item \texttt{PageRenderer::PART\_COMPLETE}
@@ -24,11 +24,10 @@
 				\item \texttt{PageRenderer::PART\_FOOTER}
 			\end{itemize}
 
-		\item \texttt{PageRenderer->render()} does not accept any method
-			arguments anymore.
+		\item \texttt{PageRenderer->render()} n'accepte plus d'arguments.
 
-		\item Extensions should use custom hooks to process or manipulate header
-			or footer parts.
+		\item Les extensions doivent utiliser les hooks pour traiter ou manipuler
+			l'en-tête et le pied de page.
 
 	\end{itemize}
 \end{frame}

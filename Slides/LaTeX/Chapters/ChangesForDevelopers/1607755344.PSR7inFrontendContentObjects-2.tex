@@ -8,20 +8,20 @@
 % Feature | 92984 | PSR-7 Request available in Frontend ContentObjects
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{PSR-7 Responses in ContentObjects (2)}
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{Réponses PSR-7 dans les objets de contenu (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item Example how to access the PSR-7 Request object in a custom cObject:\newline
+		\item Exemple d'accès à l'objet de requête PSR-7 dans un cObject~:\newline
 			\smaller\textbf{TypoScript}\normalsize
 \begin{lstlisting}
 page.10 = USER
 page.10.userFunc = Vendor\FooBar\Frontend\MyClass->test
 \end{lstlisting}
-			\smaller\textbf{PHP code}\normalsize
+			\smaller\textbf{code PHP}\normalsize
 \begin{lstlisting}
 <?php
 namespace Vendor\FooBar\Frontend;

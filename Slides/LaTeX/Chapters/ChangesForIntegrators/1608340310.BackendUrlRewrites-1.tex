@@ -8,25 +8,22 @@
 % Breaking | 93048 | Backend URL rewrites
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators}
-	\framesubtitle{Backend URLs (1)}
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Adresses Backend (1)}
 
 	\begin{itemize}
-		\item Backend URLs have changed in TYPO3 v11:\newline
+		\item Les adresses du Backend sont changées dans TYPO3 v11~:\newline
 			\small
-				\textbf{OLD:}\tabto{1.1cm}\texttt{/typo3/index.php?route=\%2Frecord\%2Fedit\&token=...}\newline
-				\textbf{NEW:}\tabto{1.1cm}\texttt{/typo3/record/edit?token=...}
+				\textbf{ANCIEN~:}\tabto{1.7cm}\texttt{/typo3/index.php?route=\%2Frecord\%2Fedit\&token=...}\newline
+				\textbf{NOUVEAU~:}\tabto{1.7cm}\texttt{/typo3/record/edit?token=...}
 			\normalsize
 
-		\item This is in preparation for "speaking URLs" and deep-linking in the
-			TYPO3 backend.
-		\item To access the TYPO3 backend, the web server configuration now
-			requires a rewrite rule.
-		\item In previous TYPO3 versions, the backend was explicitly excluded
-			from any URL rewriting logic.
-		\item When accessing the Install Tool, a silent update takes care of
-			adjusting the configuration file for Apache and Microsoft IIS,
-			if possible.
+		\item C'est en préparation des adresses réécrites et des liaisons profondes du
+			backend TYPO3.
+		\item Pour accéder au backend TYPO3, la configuration du serveur web nécessite une règle de réécriture.
+		\item Précédemment, le backend était exclus explicitement de la logique de réécriture.
+		\item Lors de l'accès à l'outils d'installation et si possible, une mise à jour silencieuse prend
+			en charge l'ajustement du fichier de configuration pour Apache et Microsoft IIS.
 
 	\end{itemize}
 \end{frame}

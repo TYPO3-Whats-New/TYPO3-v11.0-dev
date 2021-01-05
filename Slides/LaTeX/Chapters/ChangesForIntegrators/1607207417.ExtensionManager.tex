@@ -11,30 +11,30 @@
 % Breaking | 92590 | Removed support for extension upload of t3x files
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators}
-	\framesubtitle{Extension Manager}
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Gestionnaire d'extensions}
 
 	\begin{itemize}
 
-		\item The Extension Manager now features an \textit{all versions} view
-			that shows detailed information about extensions.
+		\item Le gestionnaire d'extension fournie une vue \textit{toutes les versions}
+			affichant des informations détaillés à propos des extensions.
 
-		\item The following database table is not used anymore and was removed:
+		\item La table de base de données suivante n'est plus utilisées et est retirée~:
 			\begin{itemize}\small
 				\item \texttt{tx\_extensionmanager\_domain\_model\_repository}
 			\end{itemize}\normalsize
 			\vspace{0.2cm}
 
-		\item The (undocumented) support for extension-in-extension installations
-			has been removed. TYPO3 now ignores the following directory:
+		\item La prise en charge (non documentée) d'installation d'extension dans une extension
+			est retirée. TYPO3 ignore le dossier suivant~:
 			\begin{itemize}\small
 				\item \texttt{EXT:my\_extension/Initialisation/Extensions/}
 			\end{itemize}
 			\vspace{0.2cm}
 
-		\item As we have phased out the proprietary format \texttt{.t3x} in favor
-			of \texttt{.zip} files, the option to upload \texttt{.t3x} files
-			has been removed.
+		\item Comme nous avons éliminé le format propriétaire \texttt{.t3x} en faveur
+			de fichiers \texttt{.zip}, l'option pour verser des fichiers \texttt{.t3x}
+			est retirée.
 
 	\end{itemize}
 

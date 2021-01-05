@@ -8,23 +8,22 @@
 % Feature | 92462 | Add optional defaultValues argument to newRecord ViewHelpers
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{Backend ViewHelpers}
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{ViewHelpers Backend}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item A new optional attribute \texttt{defaultValues} was added to the following
-			backend ViewHelpers:
+		\item L'attribut optionnel \texttt{defaultValues} est ajouté au ViewHelpers backend suivants~:
 
 			\begin{itemize}\smaller
 				\item \texttt{be:uri.newRecord}
 				\item \texttt{be:link.newRecord}
 			\end{itemize}\normalsize
 
-		\item The argument can be used to prefill fields with default values.
-		\item For example:
+		\item L'argument s'utilise pour préremplir les champs avec des valeurs par défaut.
+		\item Par exemple~:
 \begin{lstlisting}
 <be:link.newRecord table="tt_content" pid="17" returnUrl="foo/bar"
   defaultValues="{tt_content: {header: 'value'}}">

@@ -8,15 +8,15 @@
 % Feature | 91719 | Custom error messages in RegularExpressionValidator
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{RegularExpression Validator}
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Validateur par expression régulière}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item Custom error messages can be returned by using the new option
-			\texttt{errorMessage} of the RegularExpressionValidator:
+		\item Un message d'erreur personalisé est configurable en utilisant l'option
+			\texttt{errorMessage} de RegularExpressionValidator~:
 \begin{lstlisting}
 class MyModel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {

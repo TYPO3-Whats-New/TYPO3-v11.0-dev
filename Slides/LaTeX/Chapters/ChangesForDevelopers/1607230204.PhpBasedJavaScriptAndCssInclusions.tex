@@ -8,20 +8,20 @@
 % Breaking | 91563 | PHP-based JS + CSS inclusions for Frontend removed
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{JavaScript and CSS Inclusion}
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{Inclusions JavaScript et CSS}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The following methods and properties of the class
+		\item Les méthodes suivantes de la classe
 			\smaller\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Frontend\textbackslash
 				Controller\textbackslash
 				TypoScriptFrontendController}\normalsize\newline
-			have been removed:
+			sont retirées~:
 
 			\begin{itemize}
 				\item \texttt{setJS()}
@@ -31,9 +31,9 @@
 				\item \texttt{inlineJS}
 			\end{itemize}
 
-		\item A better approach to add JavaScript and CSS snippets is to use the
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Assets/Index.html}{AssetCollector API}
-			for example.
+		\item Une meilleur approche pour ajouter des éléments JavaScript et CSS est d'utiliser
+			l'\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Assets/Index.html}{API AssetCollector}
+			par exemple.
 	\end{itemize}
 
 \end{frame}

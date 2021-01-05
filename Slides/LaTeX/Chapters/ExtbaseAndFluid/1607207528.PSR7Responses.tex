@@ -8,17 +8,17 @@
 % Breaking | 92502 | Make Extbase handle PSR-7 responses only
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{PSR-7 Responses}
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Réponses PSR-7}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item Extbase now creates a
-			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7}-compatible
-			response object and passes it back through the request handling stack.
-		\item The following interfaces/classes are not used anymore and were removed:
+		\item Extbase crée un objet de réponse compatible
+			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7}
+			et le passe à travers la pile de gestion des requêtes.
+		\item Ces interfaces et classes ne sont plus utilisées et sont retirées~:
 
 			\begin{itemize}\smaller
 				\item \texttt{TYPO3\textbackslash
@@ -33,8 +33,8 @@
 					Response}
 			\end{itemize}\normalsize
 
-		\item If a controller action should return custom data instead of the
-			default view, a PSR-7-compatible response object can be returned:
+		\item Si une action de contrôleur doit retourner des données à la place de la vue, un
+			objet de réponse compatible PSR-7 est à retourner à la place~:
 \begin{lstlisting}
 public function listAction()
 {

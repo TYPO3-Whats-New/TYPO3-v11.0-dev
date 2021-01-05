@@ -11,19 +11,18 @@
 % Breaking | 92837 | Removed setting mod.web_layout.disableAdvanced
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators}
-	\framesubtitle{Miscellaneous}
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Divers}
 
 	\begin{itemize}
-		\item As TYPO3 now always uses the Fluid-based page module, the feature
-			toggle to switch between different implementations has been removed.
-		\item All functionality of the system extension \texttt{EXT:about}
-			have been migrated into the main backend extensionm and the
-			extension removed.
-		\item The following system-wide setting has been removed to harden the security
-			(it is now deemed as activated):\newline
+		\item TYPO3 utilisant tous le temps le module page basé sur Fluid, la bascule
+			de fonctionnalité pour changer entre les différentes implémentations est retiré.
+		\item Toutes les fonctionnalités de l'extension système \texttt{EXT:about} sont
+			migrées dans l'extension backend principale et l'extension est retirée.
+		\item Le paramètre global suivant est retiré pour renforcer la sécurité
+			(il est considéré toujours actif)~:\newline
 			\smaller\texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['BE']['lockBeUserToDBmounts']}\normalsize
-		\item The following TSconfig setting has been removed:\newline
+		\item Le paramètre TSconfig suivant est retiré~:\newline
 			\smaller\texttt{mod.web\_layout.disableAdvanced}\normalsize
 	\end{itemize}
 

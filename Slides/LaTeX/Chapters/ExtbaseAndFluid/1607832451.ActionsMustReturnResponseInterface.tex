@@ -8,24 +8,24 @@
 % Deprecation | 92784 | Extbase controller actions must return ResponseInterface
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
+	\frametitle{Extbase et Fluid}
 	\framesubtitle{PSR-7 \texttt{ResponseInterface}}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The aim to fully comply with PSR-7 affects the data types that
-			controller actions may return.
-		\item Return values can be either nothing (\small\texttt{void}\normalsize),
-			\small\texttt{null}\normalsize, a string, or an object.
-		\item Actions should now return an instance of
+		\item L'objectif de conformité complète avec PSR-7 affecte le type de retour
+			des actions des contrôleurs.
+		\item Les valeurs de retour pouvaient être rien (\small\texttt{void}\normalsize),
+			\small\texttt{null}\normalsize, une chaîne, ou un objet.
+		\item Les actions doivent retourner une instance de
 			\smaller\texttt{Psr\textbackslash
 				Http\textbackslash
 				Message\textbackslash
 				ResponseInterface}.\normalsize
-		\item Everything else triggers a warning in the deprecation log.
-		\item Code example (after migration):
+		\item Tout autre élément déclenche un avertissement dans le journal de dépréciation.
+		\item Exemple (après migration)~:
 \begin{lstlisting}
 public function listAction(): ResponseInterface
 {

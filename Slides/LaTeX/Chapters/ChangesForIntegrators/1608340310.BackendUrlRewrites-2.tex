@@ -8,24 +8,25 @@
 % Breaking | 93048 | Backend URL rewrites
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators}
-	\framesubtitle{Backend URLs (2)}
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Adresses Backend (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item If a manual adjustment of the web server configuration is required
-			(e.g. in customized setups):\newline
+		\item Si un ajustement manuel de la configuration du serveur web est nécessaire
+		\item
+			(i.e. dans les configurations personnalisées)~:\newline
 		\smaller
-			Previous configuration:
+			Configuration précédente~:
 		\normalsize
 \begin{lstlisting}
 RewriteRule ^(?:typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
 \end{lstlisting}
 
 		\smaller
-			New configuration:
+			Nouvelle configuration~:
 		\normalsize
 \begin{lstlisting}
 RewriteRule ^(?:fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
@@ -36,8 +37,8 @@ RewriteCond %{REQUEST_URI} ^/typo3/.*$
 RewriteRule ^typo3/(.*)$ %{ENV:CWD}typo3/index.php [QSA,L]
 \end{lstlisting}
 
-		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-93048-BackendURLRewrites.html}{change log}
-			for more details.
+		\item Consultez le \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-93048-BackendURLRewrites.html}{journal des changements (en)}
+			pour plus d'informations.
 
 	\end{itemize}
 \end{frame}

@@ -9,23 +9,23 @@
 % Breaking | 92807 | Removed feature for keeping session data on frontend user logout
 
 \begin{frame}[fragile]
-	\frametitle{Miscellaneous}
-	\framesubtitle{Security}
+	\frametitle{Divers}
+	\framesubtitle{Sécurité}
 
 	\begin{itemize}
-		\item To enhance the security, TYPO3 v11 does not expose the same cookie
-			for HTTP and HTTPS connections, if the instance is in the HTTPS context.
+		\item Pour améliorer la sécurité, TYPO3 v11 n'expose pas le même cookie
+			pour les connexions HTTP et HTTPS, si l'instance est dans un contexte HTTPS.
 
 			\begin{itemize}
-				\item If the site runs on HTTPS: the cookie is only exposed via HTTPS.
-				\item If the site runs on HTTP: the cookie is available via HTTP and HTTPS.
+				\item Si le site utilise HTTPS~: le cookie n'est exposé que par HTTPS.
+				\item Si le site utilise HTTP~: le cookie est disponible par HTTP et HTTPS.
 			\end{itemize}
 
-			As part of this change, the following global configuration has been removed:
+			Inclus dans ce changement, cette configuration globale est retirée~:
 		 	\smaller\texttt{\$TYPO3\_CONF\_VARS[SYS][cookieSecure]}\normalsize
 
-		\item TYPO3 removes all session data on frontend user logout\newline
-			\small(this may affect installations that rely on keeping the session, e.g. for cart functionality)\normalsize
+		\item TYPO3 retirer toutes les données de session lors de la déconnexion de l'utilisateur frontend\newline
+			\small(les installations qui comptent la non suppression peuvent être affectées, i.e. pour la gestion d'un panier)\normalsize
 
 	\end{itemize}
 

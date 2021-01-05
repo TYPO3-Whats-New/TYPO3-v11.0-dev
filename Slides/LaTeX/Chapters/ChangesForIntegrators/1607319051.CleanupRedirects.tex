@@ -8,30 +8,30 @@
 % Feature | 91712 | Redirect Module: cleanup scheduler task and CLI command
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators}
-	\framesubtitle{Clean-up Redirects}
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Nettoyage des redirections}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item A new CLI command can delete redirects that match certain criteria:
+		\item Une commande CLI est ajoutée pour supprimer les redirections correspondant à certains critères~:
 			\begin{itemize}
-				\item Age of records in days
-				\item Domain(s), comma-separated
-				\item Hit count
-				\item Status code(s), comma-separated
-				\item Path pattern
+				\item Âge des enregistrements en jour
+				\item Domaine(s), séparés par des virgules
+				\item Nombre de visites
+				\item Code(s) d'état, séparés par des virgules
+				\item Motif du chemin
 			\end{itemize}
-		\item The command can also run as a Scheduler task.
-		\item Redirects can be marked as "protected" to prevent their deletion.
-		\item For example:
+		\item La commande est utilisable depuis le planificateur de tâches.
+		\item Les redirections peuvent être marquées «~protégée~» pour empêcher la suppression.
+		\item Par exemple~:
 \begin{lstlisting}
 vendor/bin/typo3 redirects:cleanup --age 90 --path "/foobar%"
 \end{lstlisting}
 
 			\smaller
-				(this deletes all redirects that start with \texttt{/foobar} and are older than 90 days)
+				(toutes les redirections commençant par \texttt{/foobar} et ayant plus de 90 jours)
 			\normalsize
 
 	\end{itemize}

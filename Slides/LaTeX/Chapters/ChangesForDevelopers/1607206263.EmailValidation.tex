@@ -8,14 +8,14 @@
 % Feature | 92531 | Improved Email Validation
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{Email Validation}
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{Validation d'email}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item Developers can use the following method to validate email addresses:
+		\item Les développeurs peuvent utiliser cette méthode pour valider une adresse email~:
 			\newline\smaller
 				\texttt{TYPO3\textbackslash
 					CMS\textbackslash
@@ -23,10 +23,10 @@
 					Utility\textbackslash
 					GeneralUtility::validEmail()}\normalsize
 
-		\item Since TYPO3 v11.0, it is possible to configure the validators
-			and to implement custom solutions.
+		\item Depuis TYPO3 v11.0, il est possible de configurer des validateurs et d'implémenter
+			des solutions personnalisées.
 
-		\item For example:
+		\item Par exemple~:
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['MAIL']['validators'] = [
   \Egulias\EmailValidator\Validation\RFCValidation::class,
@@ -34,13 +34,13 @@ $GLOBALS['TYPO3_CONF_VARS']['MAIL']['validators'] = [
 ];
 \end{lstlisting}
 
-		\item The following default validators are available:
+		\item Les validateurs suivants sont disponibles de base~:
 			\begin{itemize}\smaller
 				\item \texttt{\textbackslash
 					Egulias\textbackslash
 					EmailValidator\textbackslash
 					Validation\textbackslash
-					RFCValidation} (used by default)
+					RFCValidation} (utilisé par défaut)
 				\item \texttt{\textbackslash
 					Egulias\textbackslash
 					EmailValidator\textbackslash

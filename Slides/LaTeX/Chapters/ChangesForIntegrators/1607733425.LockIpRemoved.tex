@@ -8,20 +8,21 @@
 % Breaking | 92559 | Removed per-user IP locking for backend users
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators}
-	\framesubtitle{IP-Lock for Backend Users}
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Verrouillage IP des utilisateurs Backend}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item TYPO3 v11 still supports to lock a backend user session to an
-			IP address or IP address range by using the following option:\newline
+		\item TYPO3 v11 supporte toujours de verrouiller une session d'utilisateur
+			backend à une adresse IP ou un interval en utilisant l'option~:\newline
 			\smaller\texttt{\$TYPO3\_CONF\_VARS[BE][lockIP]}\normalsize
-		\item In previous TYPO3 versions, administrators were able to overwrite
-			this configuration for \textit{specific} backend users if required.
-		\item This user-specific configuration, along with the following database
-			field and the TCA definition, have been removed:\newline
+		\item Dans les versions précédentes de TYPO3, les administrateurs pouvaient
+			surcharger cette configuration pour des utilisateurs backend \textit{specifiques}
+			si requis.
+		\item Cette surcharge, avec le champ de base de données suivant et sa description TCA,
+			est retirée~:\newline
 			\smaller\texttt{be\_users.disableIPlock}\normalsize
 	\end{itemize}
 \end{frame}

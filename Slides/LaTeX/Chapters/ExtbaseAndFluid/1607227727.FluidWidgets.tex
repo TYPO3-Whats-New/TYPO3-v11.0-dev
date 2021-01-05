@@ -8,27 +8,27 @@
 % Breaking | 92529 | All Fluid widget functionality removed
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{Fluid Widgets}
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Widgets Fluid}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Fluid "widgets" and all widget functionality have been removed.
-		\item The technology violates the design pattern "separation of concern"
-			and caused problems in regards to using PSR-7 request objects in Extbase.
-		\item Impact of this change:
+		\item Les widgets Fluid et toutes les fonctionnalités de widget sont retirés.
+		\item Cette technology enfreint le patron de conception «~séparation des préoccupations~»
+			et pose des problèmes à l'usage des objets de requête PSR-7 dans Extbase.
+		\item Impacts~:
 			\begin{itemize}
-				\item Fluid templates that use an existing widget will no longer work.
-				\item Custom widgets will no longer work and have to be replaced.
+				\item Les gabarits Fluid qui utilisent les widgets ne fonctionnent plus.
+				\item Les widgets personnalisés ne fonctionnent plus et doivent être remplacés.
 			\end{itemize}
-		\item Developers can use the
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Pagination/Index.html}{Pagination API}
-			instead of\newline
-			\smaller\texttt{<f:paginate...>}\normalsize\tabto{2.8cm}for example.
-		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.0/Breaking-92529-AllFluidWidgetFunctionalityRemoved.html}{change log}
-			for further details.
+		\item Les développeurs peuvent utiliser
+			l'\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Pagination/Index.html}{API Pagination}
+			au lieu de\newline
+			\smaller\texttt{<f:paginate...>}\normalsize\tabto{2.8cm}par exemple.
+		\item Consultez le \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.0/Breaking-92529-AllFluidWidgetFunctionalityRemoved.html}{journal des changements (en)}
+			pour plus d'informations.
 	\end{itemize}
 
 \end{frame}

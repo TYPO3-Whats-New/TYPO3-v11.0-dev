@@ -17,8 +17,8 @@
 	\begin{itemize}
 		\item Les groupes d'utilisateur frontend sont résolus plus tôt lors de la
 			requête frontend.
-		\item Ceci permet aux middlewares PSR-15 middlewares de correctement travailler avec les groupes d'utilisateurs.
-		\item La fonctionnalité est déplacée du middleware TSFE, qui découple l'authentification
+		\item Ceci permet aux middlewares PSR-15 de correctement travailler avec les groupes d'utilisateurs.
+		\item La fonctionnalité est déplacée du middleware TSFE, découplant l'authentification
 			utilisateur de l'objet TSFE.
 		\item Les développeurs de service d'authentification sont encouragés à re-tester leur code avec
 			TYPO3 v11.

@@ -8,16 +8,16 @@
 % Breaking | 92560 | Backend editors can always delete pages recursive
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Recursive Page Deletion}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Rekursives Löschen von Seiten}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item As recursive page deletion is now always enabled and can't be disabled,
-			the following implications affect integrators and developers:
-		\item The following TSconfig settings have been removed:
+		\item Da das rekursive Löschen von Seiten nun immer aktiviert ist und nicht deaktiviert werden kann,
+			ergeben sich folgende Auswirkungen für Integratoren und Entwickler:
+		\item Die folgenden TSconfig-Einstellungen wurden entfernt:
 
 			\begin{itemize}
 				\item \texttt{setup.default.recursiveDelete}
@@ -25,13 +25,13 @@
 				\item \texttt{setup.fields.recursiveDelete.disabled}
 			\end{itemize}
 
-		\item On a PHP level, the following property has been removed:
+		\item Auf PHP-Ebene wurde die folgende Eigenschaft entfernt:
 
 			\begin{itemize}
 				\item \texttt{DataHandler->deleteTree}
 			\end{itemize}
 
-		\item The following backend user setting has been removed:
+		\item Die folgende Backend-Benutzereinstellung wurde entfernt:
 
 			\begin{itemize}
 				\item \texttt{uc['recursiveDelete']}

@@ -8,21 +8,21 @@
 % Feature | 92457 | Improved Extension Repository API
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Remote Extension Repositories}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Ferngesteuerte Erweiterungs-Repositories}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 	% \lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item The Extension Manager now uses an \textbf{Extension Remotes API}.
-		\item Previously, alternatives to the TYPO3 Extension Repository (TER)
-			were stored in a database table.
-		\item It possible to define new remotes, disable registered remotes,
-			or change the default remote.
-		\item A custom remote configuration can be configured in file
-			\small\texttt{Configuration/Services.yaml} for example:
+		\item Der Extension Manager verwendet jetzt eine \textbf{Extension Remotes API}.
+		\item Bisher wurden die Alternativen zum TYPO3 Extension Repository (TER)
+			in einer Datenbanktabelle gespeichert.
+		\item Es ist möglich, neue Remotes zu definieren, registrierte Remotes zu deaktivieren
+			oder die Standard-Remote zu ändern.
+		\item Eine benutzerdefinierte Remote-Konfiguration kann in der Datei
+			\small\texttt{Configuration/Services.yaml} zum Beispiel:
 \begin{lstlisting}
 extension.remote.myremote:
   class: 'TYPO3\CMS\Extensionmanager\Remote\TerExtensionRemote'

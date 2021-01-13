@@ -8,22 +8,22 @@
 % 91606 | Flatpickr
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{New Datetime-Picker: "flatpickr"}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Neuer Datetime-Picker: "flatpickr"}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item New datetime picker has been introduced to the TYPO3 backend:\newline
+		\item Im TYPO3-Backend wurde ein neuer Datetime-Picker eingeführt:\newline
 			"\href{https://flatpickr.js.org/}{flatpickr}"
-			is "lean", lightweight, and doesn't depend on any libraries.
-		\item This change has several implications, most of which affect developers:
+			ist "lean", leichtgewichtig, und hängt nicht von irgendwelchen Bibliotheken ab.
+		\item Diese Änderung hat mehrere Auswirkungen, von denen die meisten Entwickler betreffen:
 
 			\begin{itemize}\small
-				\item Initializing all datetime pickers at once triggers a deprecation warning:\newline
+				\item Das Initialisieren aller Datetime-Picker auf einmal löst eine Veralterungswarnung aus:\newline
 					\texttt{DateTimePicker.initialize()}.
-				\item Option to add/subtract a date or time range in the FormEngine has been removed.
+				\item Die Option zum Hinzufügen/Subtrahieren eines Datums- oder Zeitbereichs in der FormEngine wurde entfernt.
 			\end{itemize}
 
 	\end{itemize}

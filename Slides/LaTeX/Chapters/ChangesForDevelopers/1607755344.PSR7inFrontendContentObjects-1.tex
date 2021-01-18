@@ -8,19 +8,18 @@
 % Feature | 92984 | PSR-7 Request available in Frontend ContentObjects
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
+	\frametitle{Änderungen für Entwickler}
 	\framesubtitle{PSR-7 Responses in ContentObjects (1)}
 
 	\begin{itemize}
-		\item PSR-7 standardized request objects have been added to frontend ContentObjects.
-		\item Any kind of custom cObject using PHP code can now access the PSR-7
-			Request object to fetch information about the current request.
-		\item This method should be used instead of superglobal variables
-			such as\newline
+		\item PSR-7 standardisierte Request-Objekte wurden zu Frontend ContentObjects hinzugefügt.
+		\item Jede Art von benutzerdefiniertem cObject, das PHP-Code verwendet, kann nun
+			auf das PSR-7 Request-Objekt zugreifen, um Informationen über die aktuelle Anfrage abzurufen.
+		\item Diese Methode sollte anstelle von superglobalen Variablen wie \newline
 			\smaller\texttt{\$\_GET}, \texttt{\$\_POST}, \texttt{\$\_SERVER},\normalsize
-			or TYPO3's API methods\newline
+			oder den API-Methoden von TYPO3 verwendet werden\newline
 			\smaller\texttt{GeneralUtility::\_GP()}\normalsize
-			and
+			und
 			\smaller\texttt{GeneralUtility::getIndpEnv()}\normalsize.
 
 	\end{itemize}

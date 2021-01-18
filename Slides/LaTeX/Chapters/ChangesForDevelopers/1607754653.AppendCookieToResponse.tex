@@ -8,16 +8,16 @@
 % Feature | 93011 | Authentication-related cookies are attached to PSR-7 Responses
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{Cookies set in the PSR-7 Response}
+	\frametitle{Änderungen für Entwickler}
+	\framesubtitle{In der PSR-7 Response gesetzte Cookies}
 
 	\begin{itemize}
-		\item TYPO3 now attaches cookie information for the user session information
-			in a PSR-15 middleware by default.
-		\item Previously, cookies were added using PHP's native functions\newline
-			\smaller\texttt{header()} and \texttt{setcookie()}\normalsize.
-		\item The new logic allows developers to attach the cookies to a PSR-7
-			response object by using\newline
+		\item TYPO3 fügt nun standardmäßig Cookie-Informationen für die Benutzer-Session-Informationen
+			in einer PSR-15 Middleware an.
+		\item Zuvor wurden Cookies mit Hilfe der PHP-eigenen Funktionen hinzugefügt\newline
+			\smaller\texttt{header()} und \texttt{setcookie()}\normalsize.
+		\item Die neue Logik ermöglicht es Entwicklern, die Cookies an ein PSR-7
+			Response-Objekt anzuhängen, und zwar mit\newline
 			\smaller\texttt{\$GLOBALS[BE\_USER]->appendCookieToResponse()}\normalsize.
 	\end{itemize}
 \end{frame}

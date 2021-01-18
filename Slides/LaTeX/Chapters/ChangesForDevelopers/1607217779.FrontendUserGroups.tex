@@ -8,20 +8,20 @@
 % Feature | 92562 | Frontend groups resolved directly after the Frontend User itself
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{Frontend User Groups}
+	\frametitle{Änderungen für Entwickler}
+	\framesubtitle{Frontend-Benutzergruppen}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The frontend user groups are now resolved in an earlier state of
-			the frontend request.
-		\item This allows PSR-15 middlewares to properly work with these user groups.
-		\item The functionality has been moved from TSFE into middleware,
-			which decouples the user authentication from the TSFE object.
-		\item Developers of custom authentication services are encouraged to
-			re-test their code in TYPO3 v11.
+		\item Die Frontend-Benutzergruppen werden nun in einem früheren Zustand
+			der Frontend-Anforderung aufgelöst.
+		\item Dadurch können PSR-15-Middlewares ordnungsgemäß mit diesen Benutzergruppen arbeiten.
+		\item Die Funktionalität wurde vom TSFE in die Middleware verschoben,
+			wodurch die Benutzerauthentifizierung vom TSFE-Objekt entkoppelt wird.
+		\item Entwicklern von benutzerdefinierten Authentifizierungsdiensten wird empfohlen,
+			ihren Code in TYPO3 v11 erneut zu testen.
 	\end{itemize}
 
 \end{frame}

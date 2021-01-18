@@ -8,18 +8,18 @@
 % Breaking | 92352 | New default position for redirect middleware
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
+	\frametitle{Änderungen für Entwickler}
 	\framesubtitle{"Redirect" Middleware Position}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item The "Redirect" middleware has a new default position in the middleware stack.
-		\item TYPO3 now executes
+		\item Die Middleware "Redirect" hat eine neue Standardposition im Middleware-Stapel.
+		\item TYPO3 führt nun
 			\small\texttt{cms-redirects/redirecthandler}\normalsize\newline
-			\textbf{before}
-			\texttt{cms-frontend/base-redirect-resolver}\normalsize
+			\textbf{vor}
+			\texttt{cms-frontend/base-redirect-resolver}\normalsize aus
 \begin{lstlisting}
 ...
 typo3/cms-redirects/redirecthandler
@@ -27,8 +27,8 @@ typo3/cms-frontend/base-redirect-resolver
 ...
 \end{lstlisting}
 
-		\item The change of the order was a feature toggle in TYPO3 v10.
-		\item Developers are adviced to check the position of their custom developed middlewares.
+		\item Die Änderung der Reihenfolge war ein Feature, das in TYPO3 v10 umgeschaltet wurde.
+		\item Entwicklern wird empfohlen, die Position ihrer selbst entwickelten Middlewares zu überprüfen.
 
 	\end{itemize}
 

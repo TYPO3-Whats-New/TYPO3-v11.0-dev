@@ -8,16 +8,16 @@
 % Feature | 93023 | Introduce UserSession and UserSessionManager
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
-	\framesubtitle{Session Handling}
+	\frametitle{Änderungen für Entwickler}
+	\framesubtitle{Session-Handling}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item The session handling in the TYPO3 Core has been significantly restructured.
-		\item It is not part of the user authentication objects anymore,
-			but has been moved into dedicated classes:
+		\item Das Session-Handling im TYPO3 Core wurde deutlich umstrukturiert.
+		\item Sie ist nicht mehr Teil der Benutzer-Authentifizierungsobjekte,
+			sondern wurde in dedizierte Klassen verschoben:
 
 			\begin{itemize}\small
 				\item \texttt{TYPO3\textbackslash
@@ -32,12 +32,12 @@
 					UserSessionManager}
 			\end{itemize}
 
-		\item This change leads to a centralized handling of sessions.
-		\item The \texttt{UserSessionManager} should be used as a factory to
-			create new sessions for various use-cases.
-		\item See
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/SessionStorageFramework/Index.html}{TYPO3 documentation}
-			for further details.
+		\item Diese Änderung führt zu einer zentralisierten Handhabung von Sessions.
+		\item Der \texttt{UserSessionManager} sollte als Fabrik verwendet werden,
+			um neue Sessions für verschiedene Use-Cases zu erstellen.
+		\item Siehe
+			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/SessionStorageFramework/Index.html}{TYPO3-Dokumentation}
+			für weitere Details.
 	\end{itemize}
 
 \end{frame}

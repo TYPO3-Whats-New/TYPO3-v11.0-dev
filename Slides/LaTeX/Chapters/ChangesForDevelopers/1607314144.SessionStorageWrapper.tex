@@ -8,35 +8,35 @@
 % Feature | 91738 | Introduce wrapper for sessionStorage
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Developers}
+	\frametitle{Änderungen für Entwickler}
 	\framesubtitle{Session Storage Wrapper}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item A new wrapper class has been introduced to store data temporarily
-			during a session life time:
+		\item Es wurde eine neue Wrapper-Klasse eingeführt, um Daten während der Lebensdauer
+			einer Session temporär zu speichern:
 			\smaller\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Core\textbackslash
 				Storage\textbackslash
 				BrowserSession}\normalsize
-		\item The following API methods are available:
+		\item Die folgenden API-Methoden sind verfügbar:
 			\vspace{0.1cm}
 			\begin{itemize}\smaller
 				\item \texttt{get(key)}\newline
-					To fetch the data based on a given key.
+					Zum Abrufen der Daten anhand eines bestimmten Schlüssels.
 				\item \texttt{set(key, value)}\newline
-					To set/override a key with arbitrary content.
+					Zum Setzen/Überschreiben einer Schlüssel mit beliebigem Inhalt.
 				\item \texttt{isset(key)}\newline
-					To check if a key is in use.
+					Um zu prüfen, ob eine Schlüssel in Gebrauch ist.
 				\item \texttt{unset(key)}\newline
-					To remove a key from the storage.
+					Um einen Schlüssel aus dem Speicher zu entfernen.
 				\item \texttt{clear()}\newline
-					To empty the storage and clear all data.
+					Um den Speicher zu leeren und alle Daten zu löschen.
 				\item \texttt{unsetByPrefix(prefix)}\newline
-				 	To clear all data that have keys that start with a specific prefix.
+				 	Um alle Daten zu löschen, die Schlüssel haben, die mit einem bestimmten Präfix beginnen.
 			\end{itemize}\normalsize
 
 	\end{itemize}

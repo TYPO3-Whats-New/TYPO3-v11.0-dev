@@ -8,25 +8,25 @@
 % Breaking | 93048 | Backend URL rewrites
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators}
+	\frametitle{Änderungen für Integratoren}
 	\framesubtitle{Backend URLs (1)}
 
 	\begin{itemize}
-		\item Backend URLs have changed in TYPO3 v11:\newline
+		\item Die Backend-URLs haben sich in TYPO3 v11 geändert:\newline
 			\small
-				\textbf{OLD:}\tabto{1.1cm}\texttt{/typo3/index.php?route=\%2Frecord\%2Fedit\&token=...}\newline
-				\textbf{NEW:}\tabto{1.1cm}\texttt{/typo3/record/edit?token=...}
+				\textbf{ALT:}\tabto{1.1cm}\texttt{/typo3/index.php?route=\%2Frecord\%2Fedit\&token=...}\newline
+				\textbf{NEU:}\tabto{1.1cm}\texttt{/typo3/record/edit?token=...}
 			\normalsize
 
-		\item This is in preparation for "speaking URLs" and deep-linking in the
-			TYPO3 backend.
-		\item To access the TYPO3 backend, the web server configuration now
-			requires a rewrite rule.
-		\item In previous TYPO3 versions, the backend was explicitly excluded
-			from any URL rewriting logic.
-		\item When accessing the Install Tool, a silent update takes care of
-			adjusting the configuration file for Apache and Microsoft IIS,
-			if possible.
+		\item Dies ist eine Vorbereitung für "speaking URLs" und Deep-Linking im
+			TYPO3-Backend.
+		\item Für den Zugriff auf das TYPO3-Backend wird in der Webserver-Konfiguration
+			nun eine Rewrite-Regel benötigt.
+		\item In früheren TYPO3-Versionen war das Backend explizit von
+			jeglicher URL-Rewriting-Logik ausgenommen.
+		\item Beim Zugriff auf das Install Tool wird bei einem stillen Update
+			die Konfigurationsdatei für Apache und Microsoft IIS angepasst,
+			sofern möglich.
 
 	\end{itemize}
 \end{frame}

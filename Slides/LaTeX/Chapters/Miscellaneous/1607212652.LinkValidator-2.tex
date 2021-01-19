@@ -8,26 +8,26 @@
 % Breaking | 92693 | Remove LinkHandler Linktype in Linkvalidator
 
 \begin{frame}[fragile]
-	\frametitle{Miscellaneous}
-	\framesubtitle{Link Validator (2)}
+	\frametitle{Sonstiges}
+	\framesubtitle{Link-Validator (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The LinkValidator supports several link types such as
+		\item Der LinkValidator unterstützt verschiedene Link-Typen wie
 			\small\texttt{db}\normalsize, \small\texttt{file}\normalsize,
-			\small\texttt{external}\normalsize, etc.
-		\item The type \small\texttt{linkhandler}\normalsize
-			has been outdated for a long time, and consequently removed now.
-		\item It's unlikely that this change requires a migration.
-		\item However, integrators should check and remove the \texttt{linkhandler}
-			type from the page TSconfig if it exists:
+			\small\texttt{external}\normalsize, usw.
+		\item Der Typ \small\texttt{linkhandler}\normalsize
+			ist seit langem veraltet und wurde deshalb entfernt.
+		\item Es ist unwahrscheinlich, dass diese Änderung eine Migration erfordert.
+		\item Integratoren sollten jedoch prüfen und den Typ \texttt{linkhandler}
+			aus der Seite TSconfig entfernen, wenn er vorhanden ist:
 \begin{lstlisting}
 mod.linkvalidator.linktypes = db,file,external,linkhandler
 \end{lstlisting}
 
-		\item Also, the following configuration should not be used anymore:
+		\item Außerdem sollte die folgende Konfiguration nicht mehr verwendet werden:
 \begin{lstlisting}
 mod.linkvalidator.linkhandler.reportHiddenRecords = 0
 \end{lstlisting}

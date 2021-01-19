@@ -8,22 +8,22 @@
 % Feature | 92334 | X-Redirect-By Header for pages with redirect types
 
 \begin{frame}[fragile]
-	\frametitle{Miscellaneous}
+	\frametitle{Sonstiges}
 	\framesubtitle{X-Redirect-By Header}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item On redirects, TYPO3 now sends an additional HTTP header to indicate
-			which of the following page types triggered the redirect:
+		\item Bei Redirects sendet TYPO3 nun einen zusätzlichen HTTP-Header,
+			der angibt, welcher der folgenden Seitentypen den Redirect ausgelöst hat:
 			\begin{itemize}\small
 				\item Shortcut
-				\item Mountpoint pages (where applicable)
-				\item Link to external URL
+				\item Mountpoint-Seiten (falls zutreffend)
+				\item Link zu externer URL
 			\end{itemize}\normalsize
-		\item If enabled in the global configuration, the page ID is added to the output
-			(should only be enabled for debugging purposes):
+		\item Wenn in der globalen Konfiguration aktiviert, wird die Seiten-ID zur Ausgabe hinzugefügt
+			(sollte nur zu Debugging-Zwecken aktiviert werden):
 \begin{lstlisting}
 # See: $GLOBALS['TYPO3_CONF_VARS']['FE']['exposeRedirectInformation']
 

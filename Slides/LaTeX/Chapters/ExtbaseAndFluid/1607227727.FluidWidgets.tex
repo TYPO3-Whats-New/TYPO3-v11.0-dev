@@ -8,27 +8,27 @@
 % Breaking | 92529 | All Fluid widget functionality removed
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{Fluid Widgets}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{Fluid-Widgets}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Fluid "widgets" and all widget functionality have been removed.
-		\item The technology violates the design pattern "separation of concern"
-			and caused problems in regards to using PSR-7 request objects in Extbase.
-		\item Impact of this change:
+		\item Fluid-"Widgets" und alle Widget-Funktionen wurden entfernt.
+		\item Die Technik verletzt das Entwurfsmuster "separation of concern"
+			und verursachte Probleme bei der Verwendung von PSR-7-Request-Objekten in Extbase.
+		\item Auswirkung dieser Änderung:
 			\begin{itemize}
-				\item Fluid templates that use an existing widget will no longer work.
-				\item Custom widgets will no longer work and have to be replaced.
+				\item Fluid-Vorlagen, die ein vorhandenes Widget verwenden, funktionieren nicht mehr.
+				\item Benutzerdefinierte Widgets werden nicht mehr funktionieren und müssen ersetzt werden.
 			\end{itemize}
-		\item Developers can use the
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Pagination/Index.html}{Pagination API}
-			instead of\newline
-			\smaller\texttt{<f:paginate...>}\normalsize\tabto{2.8cm}for example.
-		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.0/Breaking-92529-AllFluidWidgetFunctionalityRemoved.html}{change log}
-			for further details.
+		\item Entwickler können zum Beispiel die
+			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Pagination/Index.html}{Pagination-API}
+			anstelle von\newline
+			\smaller\texttt{<f:paginate...>}\normalsize\tabto{2.8cm}verwenden.
+		\item Siehe \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.0/Breaking-92529-AllFluidWidgetFunctionalityRemoved.html}{Änderungsprotokoll}
+			für weitere Details.
 	\end{itemize}
 
 \end{frame}

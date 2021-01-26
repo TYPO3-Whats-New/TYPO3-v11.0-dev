@@ -8,26 +8,26 @@
 % Deprecation | 92386 | Extbase property injection is deprecated
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{Dependency Injection (1)}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{Abhängigkeitsinjektion (1)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Property Dependency Injection by using
+		\item Property Dependency Injection unter Verwendung von
 			\small\texttt{@Extbase\textbackslash Inject}\normalsize\newline
-			has been marked as deprecated.
+			wurde als veraltet markiert.
 
-		\item Migration options:
+		\item Optionen für die Migration:
 
 			\begin{itemize}\small
 				\item \textbf{Constructor Injection}\newline
-				 	Allows for extension compatibility with multiple TYPO3 versions.
+				 	Ermöglicht die Kompatibilität der Extension mit mehreren TYPO3-Versionen.
 				\item \textbf{Setter Injection}\newline
-					Similar pros and cons as constructor dependency injection.
+					Ähnliche Vor- und Nachteile wie bei der Constructor Dependency Injection.
 				\item \textbf{Core Property Injection}\newline
-					Requires configuration of services in the file \texttt{Services.yaml}.
+					Erfordert die Konfiguration von Dienstleistungen in der Datei \texttt{Services.yaml}.
 			\end{itemize}\normalsize
 
 	\end{itemize}

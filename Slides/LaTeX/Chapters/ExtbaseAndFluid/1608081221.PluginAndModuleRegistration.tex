@@ -8,21 +8,21 @@
 % Breaking | 92609 | Use controller classes when registering plugins/modules
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{Plugin/Module Registration}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{Plugin/Modul-Registrierung}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item Registering plugins/modules require fully-qualified class names
-			and no vendor name as the extension name (first argument).
-		\item This was marked as deprecated in TYPO3 v10 and is now mandatory.
-		\item This applies to
+		\item Die Registrierung von Plugins/Modulen erfordert vollqualifizierte Klassennamen
+			und keinen Herstellernamen als Erweiterungsname (erstes Argument).
+		\item Dies wurde in TYPO3 v10 als veraltet markiert und ist nun erforderlich.
+		\item Dies gilt für
 			\small\texttt{ExtensionUtility::configurePlugin()}\normalsize
-			and
+			und
 			\small\texttt{ExtensionUtility::registerModule()}.
-		\item For example:
+		\item Zum Beispiel:
 \begin{lstlisting}
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
   'Form',

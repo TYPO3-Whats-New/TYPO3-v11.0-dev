@@ -10,19 +10,19 @@
 % Deprecation | 92062 | Migrate RecordListController hooks to an PSR-14 event
 
 \begin{frame}[fragile]
-	\frametitle{Deprecated/Removed Functions}
-	\framesubtitle{Miscellaneous (3)}
+	\frametitle{Veraltete/entfernte Funktionen}
+	\framesubtitle{Sonstiges (3)}
 
 	\begin{itemize}
-		\item Calling \texttt{BackendUtility::wrapClickMenuOnIcon()} with more
-			than four arguments will trigger a deprecation warning now.
-		\item The following methods have been marked as deprecated:
+		\item Beim Aufruf von \texttt{BackendUtility::wrapClickMenuOnIcon()} mit mehr als
+			vier Argumenten löst nun eine Verwerfungswarnung aus.
+		\item Die folgenden Methoden wurden als veraltet markiert:
 			\begin{itemize}\smaller
 				\item \texttt{GeneralUtility::hideIfNotTranslated()}
 				\item \texttt{GeneralUtility::hideIfDefaultLanguage()}
 			\end{itemize}\normalsize
 			\small
-				Use the following BitSet-based PHP class instead:\newline
+				Verwenden Sie stattdessen die folgende BitSet-basierte PHP-Klasse:\newline
 				\smaller\texttt{
 					TYPO3\textbackslash
 					CMS\textbackslash
@@ -32,13 +32,13 @@
 					PageTranslationVisibility}
 			\normalsize
 
-		\item The following hooks have been marked as deprecated:
+		\item Die folgenden Haken wurden als veraltet markiert:
 			\begin{itemize}\smaller
 				\item \texttt{['recordlist/Modules/Recordlist/index.php']['drawHeaderHook']}
 				\item \texttt{['recordlist/Modules/Recordlist/index.php']['drawFooterHook']}
 			\end{itemize}\normalsize
 			\small
-				Use the following PSR-14 event instead:\newline
+				Verwenden Sie stattdessen das folgende PSR-14-Event:\newline
 				\smaller\texttt{TYPO3\textbackslash
 					CMS\textbackslash
 					Recordlist\textbackslash

@@ -9,16 +9,17 @@
 
 \begin{frame}[fragile]
 	\frametitle{Wijzigingen voor integrators en ontwikkelaars}
-	\framesubtitle{SelectCheckBox Groups}
+	\framesubtitle{SelectCheckBox Groepen}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item The new TCA setting \texttt{expandAll} can be used to expand
-			grouped checkboxes by default. The setting needs to be placed in\newline
+		\item De nieuwe TCA instelling \texttt{expandAll} kan worden gebruikt om
+		    gegroepeerde selectievakjes standaard uit te klappen. Deze optie dient
+		    te worden geplaats in\newline
 			\smaller\texttt{['config']['appearance']}\normalsize
-		\item For example:
+		\item Bijvoorbeeld:
 \begin{lstlisting}
 'select_checkbox' => [
   'label' => 'Select your dinner',

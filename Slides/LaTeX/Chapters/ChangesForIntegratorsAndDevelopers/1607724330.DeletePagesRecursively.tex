@@ -9,15 +9,16 @@
 
 \begin{frame}[fragile]
 	\frametitle{Wijzigingen voor integrators en ontwikkelaars}
-	\framesubtitle{Recursive Page Deletion}
+	\framesubtitle{Recursief paginas verwijderen}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item As recursive page deletion is now always enabled and can't be disabled,
-			the following implications affect integrators and developers:
-		\item The following TSconfig settings have been removed:
+		\item Gezien recursief paginas verwijderen nu altijd is ingeschakeld en niet meer
+		    kan worden uitgeschakeld, heeft dit de volgende implicaties voor integrators
+		    en ontwikkelaars:
+		\item De volgende TSconfig instellingen zijn verwijderd:
 
 			\begin{itemize}
 				\item \texttt{setup.default.recursiveDelete}
@@ -25,13 +26,13 @@
 				\item \texttt{setup.fields.recursiveDelete.disabled}
 			\end{itemize}
 
-		\item On a PHP level, the following property has been removed:
+		\item Op PHP niveau zijn de volgende eigenschappen verwijderd:
 
 			\begin{itemize}
 				\item \texttt{DataHandler->deleteTree}
 			\end{itemize}
 
-		\item The following backend user setting has been removed:
+		\item De volgende backend gebruikers-instelling is verwijderd:
 
 			\begin{itemize}
 				\item \texttt{uc['recursiveDelete']}

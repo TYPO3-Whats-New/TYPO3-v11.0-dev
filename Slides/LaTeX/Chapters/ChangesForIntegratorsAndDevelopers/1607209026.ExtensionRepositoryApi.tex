@@ -9,20 +9,20 @@
 
 \begin{frame}[fragile]
 	\frametitle{Wijzigingen voor integrators en ontwikkelaars}
-	\framesubtitle{Remote Extension Repositories}
+	\framesubtitle{Locatie Extensie Repositories}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 	% \lstset{basicstyle=\tiny\ttfamily}
 
 	\begin{itemize}
-		\item The Extension Manager now uses an \textbf{Extension Remotes API}.
-		\item Previously, alternatives to the TYPO3 Extension Repository (TER)
-			were stored in a database table.
-		\item It possible to define new remotes, disable registered remotes,
-			or change the default remote.
-		\item A custom remote configuration can be configured in file
-			\small\texttt{Configuration/Services.yaml} for example:
+		\item De Extensie Manager gebruikt nu een \textbf{Extensie Locatie API}.
+		\item Hiervoor werden alternatieven van de TYPO3 Extensie Repository (TER)
+			opgeslagen in een database tabel.
+		\item Het is mogelijk om nieuwe locaties toe te voegen, geregistreerde locaties
+		    te verwijderen of de standaard locatie te wijzigen.
+		\item Een aangepaste locatie configuratie kan worden geconfigureerd in het bestand
+			\small\texttt{Configuration/Services.yaml} bijvoorbeeld:
 \begin{lstlisting}
 extension.remote.myremote:
   class: 'TYPO3\CMS\Extensionmanager\Remote\TerExtensionRemote'

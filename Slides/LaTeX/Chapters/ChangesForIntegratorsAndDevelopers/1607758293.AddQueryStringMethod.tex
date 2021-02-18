@@ -9,19 +9,19 @@
 
 \begin{frame}[fragile]
 	\frametitle{Wijzigingen voor integrators en ontwikkelaars}
-	\framesubtitle{TypoScript Option \texttt{addQueryString.method}}
+	\framesubtitle{TypoScript optie \texttt{addQueryString.method}}
 
 	\begin{itemize}
-		\item The TypoScript option \texttt{addQueryString.method} has been removed.
-		\item This has the following implications:
+		\item De TypoScript optie \texttt{addQueryString.method} is verwijderd.
+		\item Dit heeft de volgende implicaties:
 
 			\begin{itemize}\smaller
-				\item \texttt{UriBuilder->setAddQueryStringMethod()} now triggers a deprecation notice.
-				\item \texttt{ContentObjectRenderer->getQueryArguments()} with more than one argument has no effect anymore.
+				\item \texttt{UriBuilder->setAddQueryStringMethod()} activeert nu een verouderings waarschuwing.
+				\item \texttt{ContentObjectRenderer->getQueryArguments()} met meer dan een argument heeft geen effect meer.
 			\end{itemize}\normalsize
 
-		\item Additionally, using the argument \texttt{addQueryStringMethod} in
-			the following ViewHelpers triggers a deprecation notice:
+		\item Daarnaast bij gebruik van het argument \texttt{addQueryStringMethod} in
+			de volgende ViewHelpers wordt een verouderings waarschuwing geactiveerd:
 
 			\begin{itemize}\smaller
 				\item \texttt{<f:form>}
